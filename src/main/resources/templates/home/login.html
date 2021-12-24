@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv=”content-type” content=”text/html; charset=UTF-8″ />
+	<meta name="viewport" content="width=device-width, initial-scale-1.0"/>
+	<title>登录</title>
+	<link rel="stylesheet" th:href="@{/plugins/bootstrap/css/bootstrap.css}" >
+	<link rel="stylesheet" th:href="@{/css/user_login.css}">
+	<script th:src="@{/plugins/jquery/jquery-3.6.0.min.js}"></script>
+	<script th:src="@{/js/DataDeal.js}"></script>
+	<script th:src="@{/js/login.js}"></script>
+	<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{https://cdn.bootcdn.net/ajax/libs/sweetalert/2.1.2/sweetalert.min.js}"></script>
+
+</head>
+<body>
+
+<div class="table-bordered center-block">
+	<form class="form-horizontal" id="login_table">
+		<div class="center-block text-info" style="text-align: center;">
+			<h2>登录</h2>
+		</div>
+		<div class="form-group row">
+			<label for="uname" class="col-sm-3 col-form-label font-weight-bold ">用户名</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" id="uname" name="uname" placeholder="请输入用户名">
+			</div>
+		</div>
+
+
+
+		<div class="form-group row">
+			<label for="inputPassword" class="col-sm-3 col-form-label font-weight-bold" >密码</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control" id="inputPassword" name="password" placeholder="请输入密码">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="code" class="col-sm-3 col-form-label font-weight-bold">验证码</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" onblur="CheckItem(this)" id="code"name="code">
+
+			</div>
+			<div class="col-sm-3">
+				<img src="img/code.jpeg" id="codeimg" alt="看不清，换一张" onclick="change()" style="margin-top:-5px;position: relative;" >
+			</div>
+
+		</div>
+
+		<div class="form-group row">
+			<div class="col-sm-5 center-block">
+				<button id="login" type="button" class="btn btn-primary btn-lg center-block btn-block btn-grad" style="font-weight: bold;margin-left: 50%;";>登录</button>
+			</div>
+			<div class="col-sm-3 center-block">
+				<button  id="goregister" type="button" class="btn btn-primary btn-lg btn-block btn-grad" style="font-weight: bold;margin-left: 25px;";>注册</button>
+			</div>
+		</div>
+
+</div>
+</form>
+</div>
+<script type="text/javascript">
+
+
+
+
+
+</script>
+</body>
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+</script>
+
+</html>

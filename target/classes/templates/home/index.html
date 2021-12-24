@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap.min.js"></script>
+    <title>首页</title>
+</head>
+<body>
+
+<#--导航栏-->
+
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">码农之家</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+
+                <ul class="nav nav-pills" style="padding-left: 10px;margin-top: 5px;">
+
+                    <li role="presentation" style="padding-left: 30px;"><a class="head-a" href="#" >我的博客</a></li>
+                    <li role="presentation"><a class="head-a" href="#">问答</a></li>
+                    <li role="presentation"><a class="head-a" href="#">论坛</a></li>
+                    <li role="presentation"><a class="head-a" href="#">资源</a></li>
+                </ul>
+
+
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">发帖</a></li>
+                <li><a href="#">发博客</a></li>
+                <li><a href="#">登录</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img/>用户名：admin <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">我的博客</a></li>
+                        <li><a href="#">个人设置</a></li>
+                        <li><a href="#">后台管理</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+      <nav style="margin:55px 0px;font-size: 18px;">
+        <div>
+        <ul class="nav nav-pills" id="head-u">
+            <li class="head-1"><a href="#" style="color: black;">Java</a></li>
+            <li class="head-1"><a href="#" style="color: black;">Python</a></li>
+            <li class="head-1"><a href="#" style="color: black;">C/C++</a></li>
+            <li class="head-1"><a href="#" style="color: black;">前端</a></li>
+            <li class="head-1"><a href="#" style="color: black;">数据库</a></li>
+            <li class="head-1"><a href="#" style="color: black;">计算机基础</a></li>
+            <li class="head-1"><a href="#" style="color: black;">架构</a></li>
+            <li class="head-1"><a href="#" style="color: black;">游戏</a></li>
+            <li class="head-1"><a href="#" style="color: black;">移动</a></li>
+
+          </ul>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-md-9 col-md-push-3">  
+            <!-- 主页文章内容 -->
+            <div class="right-content">
+                <!-- 右盒子内容 -->
+                <div class="content-left-box">
+                    <!-- list内容 -->
+                    <div class="com-list-box">
+                        <div class="user-tabs">
+                            <div class="_view" style="position: relative;box-sizing: border-box;min-width: 100%;min-height: 100%;width: -webkit-fit-content;">
+                            <div>
+                                <div class="user-tabs">
+                                    <!-- list -->
+                                    <div class="tab-list-item">
+                                        <!-- 作者 -->
+                                        <div class="user-hear">
+                                            <a href="#" class="align-center" style="text-decoration: none;">
+                                                <img src="#" class="head">
+                                                <span class="name">name</span>
+                                            </a>
+                                            <!-- 发表时间 -->
+                                            <span class="flex1">
+                                                <span class="cop-p" style="color: #777888;">发表时间</span>
+                                            </span>
+                                        </div>
+                                        <!-- 标题内容 -->
+                                        <div class="content">
+                                            <!-- 标题 -->
+                                            <a href="" class="long-text-title" style="text-decoration: none;">
+                                                <span style="color: black;"><h4 style="font-weight: 550;">文章标题</h4></span>
+                                                </a>
+                                            <!-- 文章内容 -->
+                                            <div class="rich-text">
+                                                <a href="" class="item-desc-wrap" style="text-decoration: none;">
+                                                    <div class="item-title">
+                                                        <div class="item-desc">内容少时诵诗书所所所所所所所所所所所所所所所内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- 点赞回复按钮 -->
+                                        <div class="item-bottom">
+                                            <div class="item-foot">
+                                                <div class="handle-box">
+                                                    <!-- 点击数 -->
+                                                    <div class="handle-item item-scan">
+                                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                                        <span class="num">123</span>
+                                                    </div>
+                                                    <!-- 点赞 -->
+                                                    <div class="handle-item item-like" style="margin-left: 15px;">
+                                                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                                        <span class="num">123</span>
+                                                    </div>
+                                                    <!-- 回复 -->
+                                                    <div class="handle-item item-report" style="margin-left: 15px;">
+                                                        <span>
+                                                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                                            <span class="num">回复</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                        <!-- list -->
+                                        <div class="tab-list-item">
+                                            <!-- 作者 -->
+                                            <div class="user-hear">
+                                                <a href="#" class="align-center" style="text-decoration: none;">
+                                                    <img src="#" class="head">
+                                                    <span class="name">name</span>
+                                                </a>
+                                                <!-- 发表时间 -->
+                                                <span class="flex1">
+                                                    <span class="cop-p" style="color: #777888;">发表时间</span>
+                                                </span>
+                                            </div>
+                                            <!-- 标题内容 -->
+                                            <div class="content">
+                                                <!-- 标题 -->
+                                                <a href="" class="long-text-title" style="text-decoration: none;">
+                                                    <span style="color: black;"><h4 style="font-weight: 550;">文章标题</h4></span>
+                                                    </a>
+                                                <!-- 文章内容 -->
+                                                <div class="rich-text">
+                                                    <a href="" class="item-desc-wrap" style="text-decoration: none;">
+                                                        <div class="item-title">
+                                                            <div class="item-desc">内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+    
+                                            <!-- 点赞回复按钮 -->
+                                            <div class="item-bottom">
+                                                <div class="item-foot">
+                                                    <div class="handle-box">
+                                                        <!-- 点击数 -->
+                                                        <div class="handle-item item-scan">
+                                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                                            <span class="num">123</span>
+                                                        </div>
+                                                        <!-- 点赞 -->
+                                                        <div class="handle-item item-like" style="margin-left: 15px;">
+                                                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                                            <span class="num">123</span>
+                                                        </div>
+                                                        <!-- 回复 -->
+                                                        <div class="handle-item item-report" style="margin-left: 15px;">
+                                                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                                            <span class="num">回复</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    <!-- list -->
+                                        <div class="tab-list-item">
+                                            <!-- 作者 -->
+                                            <div class="user-hear">
+                                                <a href="#" class="align-center" style="text-decoration: none;">
+                                                    <img src="#" class="head">
+                                                    <span class="name">name</span>
+                                                </a>
+                                                <!-- 发表时间 -->
+                                                <span class="flex1">
+                                                    <span class="cop-p" style="color: #777888;">发表时间</span>
+                                                </span>
+                                            </div>
+                                            <!-- 标题内容 -->
+                                            <div class="content">
+                                                <!-- 标题 -->
+                                                <a href="" class="long-text-title" style="text-decoration: none;">
+                                                    <span style="color: black;"><h4 style="font-weight: 550;">文章标题</h4></span>
+                                                    </a>
+                                                <!-- 文章内容 -->
+                                                <div class="rich-text">
+                                                    <a href="" class="item-desc-wrap" style="text-decoration: none;">
+                                                        <div class="item-title">
+                                                            <div class="item-desc">内容少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+    
+                                            <!-- 点赞回复按钮 -->
+                                            <div class="item-bottom">
+                                                <div class="item-foot">
+                                                    <div class="handle-box">
+                                                        <!-- 点击数 -->
+                                                        <div class="handle-item item-scan">
+                                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                                            <span class="num">123</span>
+                                                        </div>
+                                                        <!-- 点赞 -->
+                                                        <div class="handle-item item-like" style="margin-left: 15px;">
+                                                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                                            <span class="num">123</span>
+                                                        </div>
+                                                        <!-- 回复 -->
+                                                        <div class="handle-item item-report" style="margin-left: 15px;">
+                                                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                                            <span class="num">回复</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-pull-9">
+            <!-- 人气博主 -->
+    <div class="calendar">
+        <div class="compont-title">
+            <div class="top-title"><h3>人气博主</h3>
+               
+        </div> 
+        <a style="cursor: pointer; color: #999aaa;">更多
+            <span class="glyphicon glyphicon-chevron-right" style="color: #999aaa;" aria-hidden="true"></span>
+        </a> 
+        
+        </div>
+        <div class="calendar-content">
+            <ul>
+                <li>
+                    <a>
+                        <img/>
+                        <span class="title">
+                            <span class="text">用户名:</span>
+                        </span>
+                        
+                        <span class="count">文章数</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <img/>
+                        <span class="title">
+                            <span class="text">用户名:</span>
+                        </span>
+                        
+                        <span class="count">文章数</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <img/>
+                        <span class="title">
+                            
+                            <span class="text">用户名:</span>
+                        </span>
+                        
+                        <span class="count">文章数</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <img/>
+                        <span class="title">
+                            <span class="text">用户名:</span>
+                        </span>
+                        
+                        <span class="count">文章数</span>
+                    </a>
+
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+
+<!-- 热门文章 -->
+    <div class="calendar">
+        <div class="compont-title">
+            <div class="top-title"><h3>热门文章</h3>
+               
+        </div> 
+        <a style="cursor: pointer; color: #999aaa;">更多
+            <span class="glyphicon glyphicon-chevron-right" style="color: #999aaa;" aria-hidden="true"></span>
+        </a> 
+        </div>
+
+        <div class="calendar-content">
+            <ul>
+                <li>
+                    <a>
+                       
+                        <span class="title">
+                            <span class="text">文章名</span>
+                        </span>
+                        
+                        <span class="count">点击数</span>
+                    </a>
+
+                </li>
+               
+            </ul>
+            
+        </div>       
+      </div>    
+
+      <!-- 帖子 -->
+      <div class="calendar">
+        <div class="compont-title">
+            <div class="top-title"><h3>热门帖子</h3>
+               
+        </div> 
+        <a style="cursor: pointer; color: #999aaa;">更多
+            <span class="glyphicon glyphicon-chevron-right" style="color: #999aaa;" aria-hidden="true"></span>
+        </a> 
+        </div>
+
+        <div class="calendar-content">
+            <ul>
+                <li>
+                    <a>
+                       
+                        <span class="title">
+                            <span class="text">文章名</span>
+                        </span>
+                        
+                        
+                    </a>
+
+                </li>
+               
+            </ul>
+            
+        </div>       
+      </div> 
+    </div>
+      
+       
+  
+
+
+
+    
+
+
+</body>
+</html>
