@@ -12,9 +12,15 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class RegisterUserVo {
+public class RegisterUserVo  {
+
+
     /**
-     * 用户名
+     * 账户
+     */
+    private String account;
+    /**
+     * 昵称
      */
     private String uname;
 
@@ -23,22 +29,15 @@ public class RegisterUserVo {
      */
     private String password;
 
-    /**
-     * 手机号
-     */
-    private String phone;
 
     /**
      * 邮箱
      */
     private String email;
 
-    /**
-     * 性别
-     */
-    private Integer sex;
+
 
 
     /*验证码*/
-    private String code;
+    private String captchaValue;
 }

@@ -10,8 +10,6 @@ import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.Test;
 
-import java.io.File;
-
 /**
  * 代码生成类
  * @Author 林学文
@@ -75,7 +73,7 @@ public class AutoGenerate {
         /*配置策略(数据库表配置)*/
         StrategyConfig strategyConfig = new StrategyConfig();
         /*指定表名*/
-        strategyConfig.setInclude("user");
+        strategyConfig.setInclude("sensitive");
         /*配置数据库表与实体类名之间映射策略(驼峰)*/
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         /*配置数据表字段与实体类属性名之间映射的策略（驼峰）*/

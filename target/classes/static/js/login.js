@@ -51,6 +51,7 @@ $(function () {
                     dataType: 'JSON',
                     url: '/forum/login',
                     data: jsonData,
+                    async:true,
                     contentType: "application/json;charset=utf-8",
                     success: function (res) {
                         if(res.success==true){

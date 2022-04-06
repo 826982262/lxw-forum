@@ -2,6 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.gzhh.forum.mapper.UserMapper">
 
+<select id="selectUserOrderByTime" resultType="edu.gzhh.forum.entity.User">
+    select uid,account,uname,email,flag,createTime
+    from user
+    order by createTime asc
+    limit #{start},#{limit}
+</select>
 
+    <update id="updateUsersFlagByUids" parameterType="java.util.List">
+<foreach collection="ids" index="index" item="item" open="" close="" separator=";">
+        update user
+        set flag = #{flag}
+        where uid = #{item}
+</foreach>
+    </update>
 
 </mapper>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gzhh.forum.mapper.TopicMapper">
+
+    <select id="selectAllIndexTopicByLabelId" resultType="edu.gzhh.forum.controller.home.po.TopicPo">
+        select a.t_id,a.l_name,b.uname,b.head_url,a.title,a.time,a.summary,a.istop
+        from topic as a
+        inner join
+        user as b
+        on a.uid=b.uid
+        where a.l_id = #{tagId} and a.audit!=3
+        order by a.istop desc,a.time desc
+        limit #{start},#{limit}
+    </select>
+    <select id="selectTopicByTopicId" resultType="edu.gzhh.forum.entity.Topic">
+       select a.t_id as tId,
+       a.l_id as lId,
+       a.l_name as lName,
+       a.uid as uid,
+       b.uname as uname,b.head_url as headUrl,a.title
+       as title,a.time as time ,a.content as content,
+       a.istop
+        from topic as a
+        inner join
+        user as b
+        on a.uid=b.uid
+        where a.t_id = #{topicId}
+    </select>
+    <select id="selectCheckTopic" resultType="edu.gzhh.forum.entity.Topic">
+
+
+    </select>
+    <update id="updateAudit" parameterType="java.util.List">
+    <foreach collection="topicIds" index="index" item="item" open="" close="" separator=";">
+        update topic
+        set audit=#{audit}
+        where t_id=${item}
+    </foreach>
+    </update>
+
+    <select id="selectTopicListsByAudit" resultType="edu.gzhh.forum.entity.Topic">
+        select a.t_id,a.l_name,b.uname,a.title,a.time,a.audit,a.istop
+        from topic as a
+        inner join
+        user as b
+        on a.uid = b.uid
+        <if test="audit!=null">
+            where audit=#{audit}
+        </if>
+
+        order by time asc
+        limit #{start},#{limit}
+    </select>
+    <update id="updateTopicAuditByIds" parameterType="long">
+
+            <foreach collection="ids" index="index" item="item" open="" close="" separator=";">
+                update topic
+                set audit = #{audit}
+                where t_id = #{item}
+            </foreach>
+
+    </update>
+    <update id="updateTopicIsTopByIds" parameterType="long">
+
+        <foreach collection="ids" index="index" item="item" open="" close="" separator=";">
+            update topic
+            set istop = #{istop}
+            where t_id = #{item}
+        </foreach>
+    </update>
+</mapper>

@@ -4,6 +4,8 @@ server:
     uri-encoding: UTF-8
 
 spring:
+  resources:
+    static-locations: classpath:/
   mvc:
     static-path-pattern: classpath:/static
     view:
@@ -27,6 +29,17 @@ spring:
       pool-name: hikarCP
       max-lifetime: 30000
       connection-test-query: SELECT 1
+  redis:
+    host: 119.29.79.150
+    password: 667480wohenni@
+    lettuce:
+      pool:
+        max-active: 5
+        max-idle: 1
+        max-wait: 5000
+    timeout: 30000
+    port: 6379
+
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -34,3 +47,13 @@ mybatis-plus:
 mybatis:
   type-aliases-package: edu.gzhh.forum.mapper
   mapper-locations: classpath:mapper/*Mapper.xml
+  ############# 分页插件PageHelper配置 #############
+
+pagehelper:
+  auto-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  page-size-zero: true
+  params: count=countSql
+
+

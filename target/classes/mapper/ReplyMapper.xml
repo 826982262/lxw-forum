@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gzhh.forum.mapper.ReplyMapper">
+
+    <select id="selectByCommentIdReplies" resultType="edu.gzhh.forum.entity.Reply">
+        select a.reply_id as replyId,
+        a.commentId as commentId,
+        a.uid as uid,
+        b.uname as uname,
+        b.account as account,
+        b.head_url as headUrl,
+        a.topicId as topicId,
+        a.time as time,
+        a.content as content
+        from reply as a
+        inner join user as b
+        on a.uid = b.uid
+        where a.commentId = #{commentId} and a.audit!=3
+        order by a.time asc
+
+    </select>
+
+    <update id="updateAudit" parameterType="java.util.List">
+        <foreach collection="replyIds" index="index" item="item" open="" close="" separator=";">
+            update reply
+            set audit=#{audit}
+            where reply_id=${item}
+        </foreach>
+    </update>
+</mapper>

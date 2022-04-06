@@ -9,11 +9,16 @@ import edu.gzhh.forum.common.exception.ExceptionCast;
 import edu.gzhh.forum.entity.User;
 import edu.gzhh.forum.mapper.UserMapper;
 import edu.gzhh.forum.model.response.CommonCode;
+import edu.gzhh.forum.model.response.QueryResult;
 import edu.gzhh.forum.model.response.ResponseResult;
 import edu.gzhh.forum.service.UserService;
-
+import edu.gzhh.forum.util.PageQueryUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * <p>
@@ -33,20 +38,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public ResponseResult saveUser(User user) {
 
-        if (exitByName(user.getUname())){
+        if (exitByAccount(user.getAccount())){
              ExceptionCast.cast(CommonCode.INVALID_PARAM);
         }
 
         /*判断参数书否为空*/
-       else if (ObjectUtil.hasEmpty(user.getUname(), user.getPassword(), user.getEmail(),
-                user.getPhone(), user.getSex())) {
+       else if (ObjectUtil.hasEmpty(user.getAccount(),user.getUname(), user.getPassword())) {
             ExceptionCast.cast(CommonCode.ISNOTNULL);
 
             }else {
             //密码加密
             user.setPassword(DigestUtil.md5Hex(user.getPassword()));
-            userMapper.insert(user);
-            return new ResponseResult(CommonCode.REGISTERSUCCESS);
+            int flag = userMapper.insert(user);
+            if (flag > 0) {
+                return new ResponseResult(CommonCode.REGISTERSUCCESS);
+            }
         }
             return new ResponseResult(CommonCode.REGISTERFAIL);
     }
@@ -56,15 +62,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     /**.
      * 存在返回true
      * 不存在返回false
-     * @param name
+     * @param Account
      * @return
      */
     @Override
-    public boolean exitByName(String name) {
-        if (StrUtil.isNotEmpty(name)){
+    public boolean exitByAccount(String Account) {
+        if (StrUtil.isNotEmpty(Account)){
             QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("uname",name);
-            User user = userMapper.selectOne(queryWrapper);
+            queryWrapper.eq("account",Account);
+            User user =  userMapper.selectOne(queryWrapper);
             return ObjectUtil.isNotNull(user) ? true:false;
         }
         return false;
@@ -75,17 +81,56 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      *
      * */
     @Override
-    public ResponseResult userLogin(String name, String password) {
+    public ResponseResult userLogin(String type,String account, String password, HttpServletRequest request) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("uname",name);
-        User user = userMapper.selectOne(queryWrapper);
+        /*登录类型为用户名*/
+        if ("10".equals(type)) {
+            queryWrapper.eq("account", account);
+           /* 登录类型为手机号*/
+        }else if("20".equals(type)){
+            queryWrapper.eq("phone",account);
+        }
+        User user =  userMapper.selectOne(queryWrapper);
+        /*判断账号存在*/
         if (ObjectUtil.isNull(user)){
             ExceptionCast.cast(CommonCode.LOGINERROR);
         }
+        /*密码MD5加密后对比*/
         password = DigestUtil.md5Hex(password);
+        /*密码不一致直接报异常中断*/
         if (!user.getPassword().equals(password))
         {  ExceptionCast.cast(CommonCode.LOGINERROR); }
-
+        /*验证成功，保存用户信息*/
+        HttpSession session = request.getSession();
+        session.setAttribute("user",user);
+        /*返回登录成功*/
         return new ResponseResult(CommonCode.LOGSUCCESS);
+    }
+
+    @Override
+    public QueryResult selectUserList(PageQueryUtil pageQueryUtil) {
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        int total = userMapper.selectCount(queryWrapper);
+        List<User> userList = userMapper.selectUserOrderByTime((pageQueryUtil.getPage()-1)*pageQueryUtil.getLimit(),pageQueryUtil.getLimit());
+        QueryResult<User> result = new QueryResult<>(userList,total,pageQueryUtil.getPage(),pageQueryUtil.getLimit());
+        return result;
+    }
+
+    @Override
+    public ResponseResult updateUsersFlag(List<Long> Ids,Integer flag) {
+        List<User> userList = userMapper.selectBatchIds(Ids);
+        for (User user :userList){
+            if (user.getFlag().equals(1)){
+                ExceptionCast.cast(CommonCode.INVALID_PARAM);
+            }
+        }
+
+        Integer sign = userMapper.updateUsersFlagByUids(Ids,flag);
+        if (sign== Ids.size()){
+          return   new ResponseResult(CommonCode.SUCCESS);
+        }else {
+           return new ResponseResult(CommonCode.FAIL);
+        }
+
     }
 }

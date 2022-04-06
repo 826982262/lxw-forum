@@ -23,17 +23,29 @@ public class ResponseResult implements Response {
 
     //提示信息
     String message;
+    String jumpUri;
 
     public ResponseResult(ResultCode resultCode){
         this.success = resultCode.success();
         this.code = resultCode.code();
         this.message = resultCode.message();
     }
+    public ResponseResult(ResultCode resultCode,String jumpUri){
+        this.success = resultCode.success();
+        this.code = resultCode.code();
+        this.message = resultCode.message();
+        this.jumpUri = jumpUri;
+    }
+
 
     public static ResponseResult SUCCESS(){
         return new ResponseResult(CommonCode.SUCCESS);
     }
     public static ResponseResult FAIL(){
         return new ResponseResult(CommonCode.FAIL);
+    }
+
+    public void setJumpUri(String jumpUri) {
+        this.jumpUri = jumpUri;
     }
 }

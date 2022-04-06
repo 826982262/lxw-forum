@@ -2,7 +2,6 @@ package edu.gzhh.forum.controller.home;
 
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.CircleCaptcha;
-import cn.hutool.cron.CronUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,6 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
+ * 验证码
  * @Author 林学文
  * @Date 2021/12/20 11:22
  * @Version 1.0
@@ -29,8 +29,7 @@ public class CodeController {
         }
         /*生成验证码图片*/
         CircleCaptcha circleCaptcha = CaptchaUtil.createCircleCaptcha(135, 45, 4, 20);
-        /*获取验证码*/
-        String code = circleCaptcha.getCode();
+
         /*保存在session中*/
         session.setAttribute("Captcha",circleCaptcha);
         /*设置定时过期3分钟*/
@@ -50,5 +49,17 @@ public class CodeController {
                 timer.cancel();
             }
         },1000*60*3);
+    }
+
+    @GetMapping(value = "captchaVerification")
+    public boolean captchaVerifica(@RequestParam("captchaValue") String captchaCode, HttpServletRequest request){
+        HttpSession session = request.getSession();
+        boolean flag = false;
+        CircleCaptcha circleCaptcha = (CircleCaptcha)session.getAttribute("Captcha");
+        /*验证码错误*/
+        if (circleCaptcha.verify(captchaCode)){
+           flag = true;
+        }
+        return flag;
     }
 }

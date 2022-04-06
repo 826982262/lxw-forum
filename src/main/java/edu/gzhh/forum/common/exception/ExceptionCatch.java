@@ -1,7 +1,6 @@
 package edu.gzhh.forum.common.exception;
 
 import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.core.util.StrUtil;
 import com.google.common.collect.ImmutableMap;
 import edu.gzhh.forum.model.response.CommonCode;
 import edu.gzhh.forum.model.response.ResponseResult;
@@ -9,7 +8,6 @@ import edu.gzhh.forum.model.response.ResultCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -48,9 +46,10 @@ public class ExceptionCatch {
             ModelAndView modelAndView = new ModelAndView();
 
             modelAndView.addObject("url",request.getRequestURI());
-            modelAndView.addObject("resultCode", resultCode);
-            modelAndView.addObject("message",customException.getMessage());
+            modelAndView.addObject("resultCode", resultCode.code());
+            modelAndView.addObject("message",resultCode.message());
             modelAndView.setViewName("error/error");
+            System.out.println("执行1");
             return modelAndView;
         }
     }
@@ -90,6 +89,7 @@ public class ExceptionCatch {
 
             modelAndView.addObject("message",exception.getMessage());
             modelAndView.setViewName("error/error");
+            System.out.println("执行返回视图");
             return modelAndView;
 
         }

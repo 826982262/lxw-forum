@@ -1,19 +1,21 @@
 package edu.gzhh.forum.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lxw
- * @since 2021-12-16
+ * @since 2022-02-18
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -26,54 +28,41 @@ public class User implements Serializable {
      * 用户ID
      */
     @TableId(value = "uid", type = IdType.AUTO)
-    private Integer uid;
+    private Long uid;
+
+    @TableField("account")
+    private String account;
 
     /**
      * 用户名
      */
+    @TableField("uname")
     private String uname;
 
     /**
      * 密码
      */
+    @TableField("password")
     private String password;
-
-    /**
-     * 手机号
-     */
-    private String phone;
 
     /**
      * 邮箱
      */
+    @TableField("email")
     private String email;
-
-    /**
-     * 性别
-     */
-    private Integer sex;
 
     /**
      * 权限
      */
+    @TableField("flag")
     private Integer flag;
 
     /**
      * 头像地址
      */
+    @TableField("head_url")
     private String headUrl;
-
-
-    public User(String uname, String password, String phone, String email, Integer sex, Integer flag, String headUrl) {
-        this.uname = uname;
-        this.password = password;
-        this.phone = phone;
-        this.email = email;
-        this.sex = sex;
-        this.flag = flag;
-        this.headUrl = headUrl;
-    }
-
-    public User() {
-    }
+/*创建时间*/
+    @TableField("createTime")
+    private String createTime;
 }
