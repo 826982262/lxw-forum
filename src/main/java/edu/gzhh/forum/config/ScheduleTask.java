@@ -42,7 +42,7 @@ public class ScheduleTask {
     ReplyService replyService;
     @Autowired
     SensitivityService sensitiveService;
-    /*2分钟*/
+    /*15分钟执行一次*/
     @Scheduled(fixedRate = 1000*60*15)
     private void checkTopicSensitiveScheduleTask(){
         System.out.println("开始自动审核文章定时任务");

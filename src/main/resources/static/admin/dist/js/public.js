@@ -86,7 +86,7 @@ function validCN_ENString2_18(str) {
 
     // var pattern = /^[a-zA-Z0-9-\u4E00-\u9FA5_,， ]{2,18}$/;
     // if (pattern.test(str.trim())) {
-        if ( str.isEmpty(str)) {
+        if ( str !=null) {
         return (true);
     } else {
         return (false);

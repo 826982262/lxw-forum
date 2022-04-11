@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: edu.gzhh.forum.util.TestMapper
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.097 s <<< FAILURE! - in edu.gzhh.forum.util.TestMapper
+text05  Time elapsed: 0.053 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+
+### Error updating database.  Cause: java.sql.SQLException: Field 'topicId' doesn't have a default value
+### The error may exist in edu/gzhh/forum/mapper/SensitivityMapper.java (best guess)
+### The error may involve edu.gzhh.forum.mapper.SensitivityMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO sensitivity  ( type,  cid, content, senWord,  audit )  VALUES  ( ?,  ?, ?, ?,  ? )
+### Cause: java.sql.SQLException: Field 'topicId' doesn't have a default value
+; Field 'topicId' doesn't have a default value; nested exception is java.sql.SQLException: Field 'topicId' doesn't have a default value
+	at edu.gzhh.forum.util.TestMapper.text05(TestMapper.java:115)
+Caused by: java.sql.SQLException: Field 'topicId' doesn't have a default value
+	at edu.gzhh.forum.util.TestMapper.text05(TestMapper.java:115)
+

@@ -1,4 +1,4 @@
-package edu.gzhh.forum.model.response;
+package edu.gzhh.forum.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

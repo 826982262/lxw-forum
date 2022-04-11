@@ -1,4 +1,4 @@
-package edu.gzhh.forum.model.response;
+package edu.gzhh.forum.model;
 
 /**
  * @Author 林学文

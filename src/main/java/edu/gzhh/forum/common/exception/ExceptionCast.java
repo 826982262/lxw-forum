@@ -1,6 +1,6 @@
 package edu.gzhh.forum.common.exception;
 
-import edu.gzhh.forum.model.response.ResultCode;
+import edu.gzhh.forum.model.ResultCode;
 
 /**
  * @Author 林学文

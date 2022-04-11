@@ -2,9 +2,9 @@ package edu.gzhh.forum.common.exception;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.google.common.collect.ImmutableMap;
-import edu.gzhh.forum.model.response.CommonCode;
-import edu.gzhh.forum.model.response.ResponseResult;
-import edu.gzhh.forum.model.response.ResultCode;
+import edu.gzhh.forum.model.CommonCode;
+import edu.gzhh.forum.model.ResponseResult;
+import edu.gzhh.forum.model.ResultCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;

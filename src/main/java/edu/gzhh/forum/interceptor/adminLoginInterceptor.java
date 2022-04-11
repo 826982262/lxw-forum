@@ -2,7 +2,7 @@ package edu.gzhh.forum.interceptor;
 
 import edu.gzhh.forum.common.exception.ExceptionCast;
 import edu.gzhh.forum.entity.User;
-import edu.gzhh.forum.model.response.CommonCode;
+import edu.gzhh.forum.model.CommonCode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;

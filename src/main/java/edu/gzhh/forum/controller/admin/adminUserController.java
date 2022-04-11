@@ -1,9 +1,9 @@
 package edu.gzhh.forum.controller.admin;
 
 import edu.gzhh.forum.common.exception.ExceptionCast;
-import edu.gzhh.forum.model.response.CommonCode;
-import edu.gzhh.forum.model.response.QueryResult;
-import edu.gzhh.forum.model.response.ResponseResult;
+import edu.gzhh.forum.model.CommonCode;
+import edu.gzhh.forum.model.QueryResult;
+import edu.gzhh.forum.model.ResponseResult;
 import edu.gzhh.forum.service.UserService;
 import edu.gzhh.forum.util.PageQueryUtil;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,7 +3,7 @@ package edu.gzhh.forum.controller.home;
 
 import edu.gzhh.forum.common.Constants;
 import edu.gzhh.forum.entity.Label;
-import edu.gzhh.forum.model.response.QueryResult;
+import edu.gzhh.forum.model.QueryResult;
 import edu.gzhh.forum.service.LabelService;
 import edu.gzhh.forum.service.TopicService;
 import org.apache.logging.log4j.LogManager;

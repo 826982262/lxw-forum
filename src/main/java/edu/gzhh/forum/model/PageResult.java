@@ -1,4 +1,4 @@
-package edu.gzhh.forum.model.response;
+package edu.gzhh.forum.model;
 
 import java.io.Serializable;
 import java.util.List;

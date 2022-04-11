@@ -2,7 +2,7 @@ package edu.gzhh.forum.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import edu.gzhh.forum.entity.Reply;
-import edu.gzhh.forum.model.response.ResponseResult;
+import edu.gzhh.forum.model.ResponseResult;
 
 import java.util.List;
 

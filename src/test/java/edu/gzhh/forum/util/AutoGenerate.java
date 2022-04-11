@@ -45,13 +45,13 @@ public class AutoGenerate {
         /*数据源配置*/
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         /*配置数据库url*/
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/forum?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true");
+        dataSourceConfig.setUrl("jdbc:mysql://119.29.79.150:3306/forum?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true");
         /*配置数据库驱动*/
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
         /*配置连接用户名*/
         dataSourceConfig.setUsername("root");
         /*设置连接密码*/
-        dataSourceConfig.setPassword("123456");
+        dataSourceConfig.setPassword("667480");
         autoGenerator.setDataSource(dataSourceConfig);
 
         /*包配置*/
@@ -73,7 +73,7 @@ public class AutoGenerate {
         /*配置策略(数据库表配置)*/
         StrategyConfig strategyConfig = new StrategyConfig();
         /*指定表名*/
-        strategyConfig.setInclude("sensitive");
+        strategyConfig.setInclude("sensitivity","comment","label","reply","topic","user");
         /*配置数据库表与实体类名之间映射策略(驼峰)*/
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         /*配置数据表字段与实体类属性名之间映射的策略（驼峰）*/

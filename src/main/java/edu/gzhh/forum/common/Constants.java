@@ -8,6 +8,6 @@ package edu.gzhh.forum.common;
  */
 public class Constants {
 //    public final static String FILE_UPLOAD_DIC = "/mydata/app/admin/upload/";//上传文件的默认url前缀，根据部署设置自行修改
-    public final static String FILE_UPLOAD_DIC = "F:/upload/";//上传文件的默认url前缀，根据部署设置自行修改
+    public final static String FILE_UPLOAD_DIC = "E:/upload/";//上传文件的默认url前缀，根据部署设置自行修改
     public final static Integer TOPIC_NUM = 10;
 }

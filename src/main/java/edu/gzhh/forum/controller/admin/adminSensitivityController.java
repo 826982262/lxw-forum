@@ -2,9 +2,9 @@ package edu.gzhh.forum.controller.admin;
 
 import cn.hutool.core.util.ObjectUtil;
 import edu.gzhh.forum.common.exception.ExceptionCast;
-import edu.gzhh.forum.model.response.CommonCode;
-import edu.gzhh.forum.model.response.QueryResult;
-import edu.gzhh.forum.model.response.ResponseResult;
+import edu.gzhh.forum.model.CommonCode;
+import edu.gzhh.forum.model.QueryResult;
+import edu.gzhh.forum.model.ResponseResult;
 import edu.gzhh.forum.service.SensitivityService;
 import edu.gzhh.forum.util.PageQueryUtil;
 import org.springframework.beans.factory.annotation.Autowired;
