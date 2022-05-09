@@ -2,8 +2,10 @@ package edu.gzhh.forum.util;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.file.FileWriter;
+import cn.hutool.http.HtmlUtil;
 import cn.hutool.system.RuntimeInfo;
 import cn.hutool.system.SystemUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import edu.gzhh.forum.common.SensitiveWordFilterInit;
 import edu.gzhh.forum.entity.Label;
 import edu.gzhh.forum.entity.Sensitivity;
@@ -134,8 +136,12 @@ SensitivityMapper sensitiveMapper;
     }
     @Test
     public void text01(){
-        FileWriter fileWriter = new FileWriter("classpath:sent.txt");
-        fileWriter.append("11");
+        QueryWrapper<Topic> queryWrapper = new QueryWrapper<>();
+        List<Topic> topicList = topicMapper.selectList(queryWrapper);
+        for (Topic topic :topicList){
+            topic.setContentFilter(HtmlUtil.cleanHtmlTag(topic.getContent()));
+            topicMapper.update(topic,queryWrapper);
+        }
     }
 
 }

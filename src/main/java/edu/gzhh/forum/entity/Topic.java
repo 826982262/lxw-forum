@@ -76,4 +76,6 @@ public class Topic implements Serializable {
     /** 允许评论 **/
     @TableField(exist = false)
     private boolean allow = true;
+    @TableField("content_filter")
+    private String contentFilter;
 }

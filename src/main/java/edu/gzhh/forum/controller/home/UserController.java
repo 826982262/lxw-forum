@@ -7,6 +7,7 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HtmlUtil;
+import edu.gzhh.forum.common.Constants;
 import edu.gzhh.forum.common.exception.ExceptionCast;
 import edu.gzhh.forum.controller.home.vo.RegisterUserVo;
 import edu.gzhh.forum.entity.Comment;
@@ -15,6 +16,7 @@ import edu.gzhh.forum.entity.Topic;
 import edu.gzhh.forum.entity.User;
 import edu.gzhh.forum.interceptor.userLogin;
 import edu.gzhh.forum.model.CommonCode;
+import edu.gzhh.forum.model.QueryResult;
 import edu.gzhh.forum.model.ResponseResult;
 import edu.gzhh.forum.service.CommentService;
 import edu.gzhh.forum.service.LabelService;
@@ -24,6 +26,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -56,6 +59,7 @@ public class UserController {
     @Autowired
     LabelService labelService;
 
+    @userLogin
     @ResponseBody
     @PostMapping(value = "/comment/add")
     @ApiOperation(value = "添加文章",response = ResponseResult.class)
@@ -102,10 +106,12 @@ public class UserController {
     }
 
 
+
     @GetMapping(value = "/exitAccount")
     public boolean exitName(@RequestParam("account") String account){
         return userService.exitByAccount(account);
     }
+
 
 
     @ResponseBody
@@ -162,6 +168,7 @@ public class UserController {
     }
 
 
+    @userLogin
     @RequestMapping("/user/home")
     public String userhome(){
         return "home/home";
@@ -176,13 +183,14 @@ public class UserController {
         if (ObjectUtil.isNull(user)){ExceptionCast.cast(CommonCode.UNAUTHENTICATED);}
         if (ObjectUtil.isNull(topicId)){ExceptionCast.cast(CommonCode.ISNOTNULL);}
         Topic topic = topicService.selectTopicByTopicId(topicId);
-        if (topic.getUid()!=topic.getUid()){ExceptionCast.cast(CommonCode.UNAUTHORISE);}
+        if (!topic.getUid().equals(topic.getUid())){ExceptionCast.cast(CommonCode.UNAUTHORISE);}
         List<Label> labelList = labelService.getAllLabel();
         request.setAttribute("topic",topic);
         request.setAttribute("tags",labelList);
 
         return "home/editTopic";
     }
+    @userLogin
     @ResponseBody
     @PostMapping(value = "/user/doEditTopic")
     public ResponseResult addTopic( @RequestBody Map<String,Object> map,
@@ -233,6 +241,27 @@ public class UserController {
 
         return topicService.updateTopic(topic);
 //        return topicCommentservice.addTopic(topic);
+    }
+    @userLogin
+    @GetMapping("/user/mytopic")
+    public String mytopic(@RequestParam(value = "page",required=false)Integer page
+                             , HttpServletRequest request
+                            , ModelMap model){
+        if (page == null){
+            page=1;
+        }
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        QueryResult result = topicService.selectTopicByUserId(user.getUid(),(page-1)* Constants.TOPIC_NUM, Constants.TOPIC_NUM);
+        long total = result.getTotal();
+        /*总页数*/
+        int totalPage = (int) Math.ceil(1.0*total/Constants.TOPIC_NUM);
+        model.addAttribute("topicLists",result.getList());
+        request.setAttribute("total",total);
+        request.setAttribute("totalPage",totalPage);
+        request.setAttribute("page",page);
+        model.addAttribute("path","mytopic");
+        return "home/mytopic";
     }
 
 

@@ -1,6 +1,7 @@
 package edu.gzhh.forum.controller.home;
 
 
+import cn.hutool.core.util.ObjectUtil;
 import edu.gzhh.forum.common.Constants;
 import edu.gzhh.forum.entity.Label;
 import edu.gzhh.forum.model.QueryResult;
@@ -10,6 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -35,22 +37,27 @@ public class IndexController {
 
 
 
-    @RequestMapping(value = {"/index","/"})
+
+    @RequestMapping(value = {"/index","/",""})
     public String indexPage(@RequestParam(value = "tagId",required=false)Integer tagId,
                             @RequestParam(value = "page",required=false)Integer page,
+                            @RequestParam(value = "keyword",required=false)String keyword,
                             HttpServletRequest request){
-        if (tagId == null) {
+        if (ObjectUtil.isNull(tagId)) {
             tagId = 1;
         }
         if (page == null){
             page=1;
+        }
+        if (ObjectUtil.isNotNull(keyword)){
+            request.setAttribute("keyword",keyword);
         }
 //        ThreadUtil.execAsync()
         /*功能块*/
         List<Label> labelList = labelService.getAllLabel();
         /*话题*/
 //
-        QueryResult topicLists =  topicService.selectTopicByLabelId(tagId,(page-1)*Constants.TOPIC_NUM, Constants.TOPIC_NUM);
+        QueryResult topicLists =  topicService.selectTopicByLabelId(tagId,(page-1)*Constants.TOPIC_NUM, Constants.TOPIC_NUM,keyword);
         /*总条数*/
         long total = topicLists.getTotal();
         /*总页数*/
@@ -84,6 +91,7 @@ public class IndexController {
 
         return "home/context";
     }
+
 
 
 }

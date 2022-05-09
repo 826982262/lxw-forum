@@ -8,7 +8,16 @@
         inner join
         user as b
         on a.uid=b.uid
-        where a.l_id = #{tagId} and a.audit!=3
+        where   a.audit!=3
+
+        <if test="tagId!=null and tagId!=1">
+            and
+        a.l_id = #{tagId}
+        </if>
+
+        <if test="keyword!=null">
+            and content_filter like "%"#{keyword}"%"
+        </if>
         order by a.istop desc,a.time desc
         limit #{start},#{limit}
     </select>
@@ -68,4 +77,12 @@
             where t_id = #{item}
         </foreach>
     </update>
+
+    <select id="selectTopicByUid" resultType="edu.gzhh.forum.entity.Topic">
+        select * from topic
+        where uid= #{uid}
+        order by time desc
+        limit #{start},#{limit}
+    </select>
+
 </mapper>

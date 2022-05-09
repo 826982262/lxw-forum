@@ -65,19 +65,22 @@ public class TopicController {
         if (ObjectUtil.isNull(user)){
             ExceptionCast.cast(CommonCode.UNAUTHENTICATED);
         }
+
         /*过滤xss攻击*/
-        String ContentResult = HtmlUtil.filter(Content);
+//        String ContentResult = HtmlUtil.filter(Content);
         /*去除content内容的html标签*/
         /*获取文本内容摘要前30个字符*/
         String summary = StrUtil.sub(HtmlUtil.cleanHtmlTag(Content),0,200) ;
         Long uid = user.getUid();
         Topic topic = new Topic();
+        topic.setContentFilter(HtmlUtil.cleanHtmlTag(Content));
         topic.setUid(uid);
         topic.setLId(tagId);
         topic.setLName(tag_Name);
         topic.setTime(DateUtil.now());
         topic.setTitle(Title);
-        topic.setContent(ContentResult);
+
+        topic.setContent(Content);
         topic.setSummary(summary);
         return topicService.addTopic(topic);
 

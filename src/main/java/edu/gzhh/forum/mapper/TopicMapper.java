@@ -20,7 +20,9 @@ import java.util.List;
 public interface TopicMapper extends BaseMapper<Topic> {
     List<TopicPo> selectAllIndexTopicByLabelId(@Param("tagId") Integer tagId,
                                                @Param("start") Integer start,
-                                               @Param("limit") Integer limit);
+                                               @Param("limit") Integer limit,
+                                               @Param("keyword") String keyword
+                                               );
     Topic selectTopicByTopicId(Long topicId);
     List<Topic> selectCheckTopic(@Param("check") boolean chack);
 
@@ -30,4 +32,8 @@ public interface TopicMapper extends BaseMapper<Topic> {
                                         @Param("audit")Integer audit);
     Integer updateTopicAuditByIds(@Param("ids") List<Long> ids,@Param("audit") Integer audit);
     Integer updateTopicIsTopByIds(@Param("ids") List<Long> ids,@Param("istop") Integer istop);
+
+    List<Topic> selectTopicByUid(@Param("uid")Long uid,
+                                 @Param("start") Integer start,
+                                 @Param("limit") Integer limit);
 }

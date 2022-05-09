@@ -161,6 +161,7 @@
                     <div class="tipBottom">
 						<span class="a-toolbar">
 							<a href="javascript:" th:onclick="'replyLayer('+${comment.commentId}+','+${topic.tId}+','+${comment.uid}+');'"><i class="cms-reply" ></i>回复</a>
+
         <th:block th:if="${session.user!=null}">
                 <a href="javascript:" th:if="${comment.uid==session.user.uid}" onclick="editCommentLayer('${comment.id}','${(comment.nickname != null && comment.nickname??) ?string(comment.nickname , comment.userName)}');"><i class="cms-pencil-alt" ></i>编辑</a>
                 <a href="javascript:" th:if="${comment.uid==session.user.uid}" onclick="deleteCommentLayer('${comment.id}');"><i class="cms-trash" ></i>删除</a>
@@ -173,7 +174,7 @@
                 </th:block>
 <!--</#list>-->
 </ol>
-<th:block th:if="${#lists.isEmpty(comments)}">
+<th:block th:unless="${#lists.isEmpty(comments)}">
 <div class="commentPage">
 <!--分页-->
 <div th:replace="/home/index::Page"></div>
@@ -517,9 +518,7 @@
 
     //回复展开层
     function replyLayer(commentId,topicId,commentuid){
-
         var parameter ="&commentId="+commentId+"&topicId="+topicId+"&commentuid="+commentuid;
-
         swal({
             title: "回复",
             content: "input",
@@ -539,12 +538,9 @@
                 }
                },
                    "/reply/add?&timestamp=" + new Date().getTime(), true,parameter)
-
         }
         }
         );
-
-
     }
     function cancelReply(commentId){
         $("#commentReply-post_"+commentId).html("");

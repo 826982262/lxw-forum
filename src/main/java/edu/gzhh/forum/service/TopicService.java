@@ -17,7 +17,7 @@ import java.util.List;
  * @since 2022-02-12
  */
 public interface TopicService extends IService<Topic> {
-    QueryResult selectTopicByLabelId(Integer tagId, Integer start, Integer limit);
+    QueryResult selectTopicByLabelId(Integer tagId, Integer start, Integer limit,String keyword);
     ResponseResult addTopic(Topic topic);
     Topic selectTopicByTopicId(Long topicId);
     List<Topic> selectNotCheckTopic(Integer audit);
@@ -26,4 +26,6 @@ public interface TopicService extends IService<Topic> {
     QueryResult selectTopicByAudit(PageQueryUtil pageQueryUtil,Integer audit);
     ResponseResult UpdateIsTopByIds(List<Long> Ids,Integer istop);
     ResponseResult updateTopic(Topic topic);
+
+    QueryResult selectTopicByUserId(Long uid,Integer start, Integer limit);
 }

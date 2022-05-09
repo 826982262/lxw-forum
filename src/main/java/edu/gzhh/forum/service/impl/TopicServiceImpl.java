@@ -46,12 +46,13 @@ public class TopicServiceImpl extends ServiceImpl<TopicMapper, Topic> implements
      * @return
      */
     @Override
-    public QueryResult selectTopicByLabelId(Integer tagId, Integer start, Integer limit) {
+    public QueryResult selectTopicByLabelId(Integer tagId, Integer start, Integer limit,String keyword) {
         QueryWrapper<Topic> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("l_id",tagId);
+            queryWrapper.eq("l_id",tagId);
+
         queryWrapper.ne("audit",3);
         long total =  topicMapper.selectCount(queryWrapper);
-        List<TopicPo> topicLists = topicMapper.selectAllIndexTopicByLabelId(tagId,start,limit);
+        List<TopicPo> topicLists = topicMapper.selectAllIndexTopicByLabelId(tagId,start,limit,keyword);
         QueryResult<TopicPo> queryResult = new QueryResult<>();
         queryResult.setList(topicLists);
         queryResult.setTotal(total);
@@ -93,7 +94,8 @@ public class TopicServiceImpl extends ServiceImpl<TopicMapper, Topic> implements
         List<Topic> topicLists = topicMapper.selectList(queryWrapper);
         return topicLists;
     }
-    public Integer updateAuditResult(List<Long> topicIds,Integer audit){
+    @Override
+    public Integer updateAuditResult(List<Long> topicIds, Integer audit){
 
 
         return  topicMapper.updateAudit(topicIds,audit);
@@ -160,5 +162,20 @@ public class TopicServiceImpl extends ServiceImpl<TopicMapper, Topic> implements
             return new ResponseResult(CommonCode.SUCCESS);
         }
         return new ResponseResult(CommonCode.FAIL);
+    }
+
+    @Override
+    public QueryResult selectTopicByUserId(Long uid,Integer start, Integer limit) {
+
+        QueryWrapper<Topic> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("uid",uid);
+        long total =  topicMapper.selectCount(queryWrapper);
+        List<Topic> topicLists = topicMapper.selectTopicByUid(uid,start,limit);
+        QueryResult<Topic> queryResult = new QueryResult<>();
+        queryResult.setList(topicLists);
+        queryResult.setTotal(total);
+        return queryResult;
+
+
     }
 }

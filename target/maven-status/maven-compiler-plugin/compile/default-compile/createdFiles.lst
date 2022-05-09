@@ -44,7 +44,6 @@ edu\gzhh\forum\util\PageQueryUtil.class
 edu\gzhh\forum\mapper\SensitivityMapper.class
 edu\gzhh\forum\model\TopicCode.class
 edu\gzhh\forum\controller\home\vo\RegisterUserVo.class
-edu\gzhh\forum\controller\home\Redis.class
 edu\gzhh\forum\service\UserService.class
 edu\gzhh\forum\model\Response.class
 edu\gzhh\forum\model\QueryRestResponse.class
