@@ -21,7 +21,7 @@
             <!--以下两项需要如果不配置，解析themleaft 会有问题-->
             <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
             <thymeleaf-layout-dialect.version>2.0.5</thymeleaf-layout-dialect.version>
-        <skipStandalone>true</skipStandalone>
+        <skipStandalone>false</skipStandalone>
         <lombok.version>1.18.4</lombok.version>
     </properties>
 
