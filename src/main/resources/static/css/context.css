@@ -1,0 +1,41 @@
+ body{
+    background-color: #f5f6f7;
+ }
+ .context-edit{
+    /* position: relative; */
+    width: 80%;
+     /* height: 500px;  */
+     margin: 0 auto;
+    margin-top: 20px;
+} 
+
+.form-group{
+    margin: 0 auto;
+    width: 700px;
+    
+   
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.centext{
+    position:relative;
+    margin: 0 auto;
+    width: 1100px;
+    height: 800px;
+    background-color: #fff;
+     
+}
+.form-group{
+    margin-top: 5px;
+}
+.context-btn{
+    display: inline;
+    margin-top: 20px;
+}
+
+#div1{
+    margin-left: -20px;
+}

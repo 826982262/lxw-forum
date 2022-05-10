@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jfeat.forum.services.gen.persistence.dao.SensitivityMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jfeat.forum.services.gen.persistence.model.Sensitivity">
+        <id column="id" property="id" />
+        <result column="topicId" property="topicId" />
+        <result column="type" property="type" />
+        <result column="cid" property="cid" />
+        <result column="content" property="content" />
+        <result column="createTime" property="createTime" />
+        <result column="senWord" property="senWord" />
+        <result column="audit" property="audit" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, topicId, type, cid, content, createTime, senWord, audit
+    </sql>
+    <select id="selectOrderByTimeOrAuditByLimit" resultType="com.jfeat.forum.services.gen.persistence.model.Sensitivity">
+        select id,type,cid,senWord,createTime,audit
+        from sensitivity
+        <if test="audit!=null and audit!=3">
+            where audit=#{audit}
+        </if>
+        <if test="audit!=null and audit==3">
+            where audit!=0
+        </if>
+        order by createTime asc
+        limit #{start},#{limit}
+
+    </select>
+
+    <select id="selectTypeIdsByTypeAndAudit" resultType="long">
+        select cid
+        from sensitivity
+        where type=#{type} and audit=#{audit}
+    </select>
+    <update id="updateAuditByCid" parameterType="java.util.List">
+        <foreach collection="cids" index="index" item="item" open="" close="" separator=";">
+            update sensitivity
+            set audit = #{audit}
+            where cid = #{item}
+        </foreach>
+    </update>
+    <update id="updateSensitivityAuditByIds" parameterType="java.util.List">
+        <foreach collection="ids" index="index" item="item" open="" close="" separator=";">
+            update sensitivity
+            set audit = #{audit}
+            where id = #{item}
+        </foreach>
+    </update>
+</mapper>

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>forum-artifact-uat</artifactId>
+    <artifactId>forum-main</artifactId>
     <version>1.0.0</version>
 
     <parent>
@@ -15,35 +15,41 @@
     </parent>
 
     <properties>
-        <skipStandalone>false</skipStandalone>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+            <java.version>11</java.version>
+            <!--以下两项需要如果不配置，解析themleaft 会有问题-->
+            <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+            <thymeleaf-layout-dialect.version>2.0.5</thymeleaf-layout-dialect.version>
+        <skipStandalone>true</skipStandalone>
         <lombok.version>1.18.4</lombok.version>
-        <hutool-core.version>5.2.5</hutool-core.version>
-        <field-config.version>1.2.2</field-config.version>
-        <zero-io-excel.version>1.2.0</zero-io-excel.version>
-        <zero-io-fs.version>1.0.0</zero-io-fs.version>
-        <mysql.version>8.0.27</mysql.version>
-        <uaas.version>3.1.0</uaas.version>
-        <org.version>3.1.0</org.version>
-        <menu.version>1.0.0</menu.version>
-        <jwt-core.version>0.1.2</jwt-core.version>
-        <perm-core.version>0.1.2</perm-core.version>
-        <crud-runtime.version>0.0.1</crud-runtime.version>
-        <sms-sdk.version>1.0.0</sms-sdk.version>
     </properties>
 
     <dependencies>
-
         <dependency>
-            <groupId>edu-gzhh-forum</groupId>
-            <artifactId>lxw-forum</artifactId>
-            <version>1.0.1</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+
         </dependency>
-
-        <!-- replace with crud-runtime
         <dependency>
-            <groupId>com.jfeat</groupId>
-            <artifactId>crud-base</artifactId>
-            <version>${crud-base.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--        hutool开源工具包-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jfeat</groupId>
@@ -52,51 +58,26 @@
         </dependency>
         <dependency>
             <groupId>com.jfeat</groupId>
+            <artifactId>jwt-core</artifactId>
+            <version>${jwt-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jfeat</groupId>
             <artifactId>crud-plus</artifactId>
             <version>${crud-plus.version}</version>
         </dependency>
-        -->
 
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-<!-- mysql -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
-<!-- dev tools -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.22</version>
-        </dependency>
+        
+        
+        
+        
+        
     </dependencies>
 
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>com.github.kongchen</groupId>
                 <artifactId>swagger-maven-plugin</artifactId>
@@ -185,13 +166,4 @@
         </resources>
     </build>
 
-
-
-    <repositories>
-        <repository>
-            <id>archiva-internal</id>
-            <name>Internal Repository</name>
-            <url>http://git.smallsaas.cn:8081/repository/internal</url>
-        </repository>
-    </repositories>
 </project>

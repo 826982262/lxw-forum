@@ -7,15 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nft-artifact-uat" />
-        <module name="nft-oms" />
-        <module name="nft-artifact-auth" />
+        <module name="forum-main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="nft-artifact-auth" target="11" />
-      <module name="nft-artifact-uat" target="11" />
-      <module name="nft-oms" target="11" />
+      <module name="forum-main" target="11" />
+      <module name="label" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
