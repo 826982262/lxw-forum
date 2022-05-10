@@ -76,7 +76,7 @@ public class IndexController {
 
     @RequestMapping("/login")
     public String login(){
-        return "home/login";
+        return "reception/login";
     }
 
 

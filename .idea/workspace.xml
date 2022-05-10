@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/TopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/TopicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/commentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/commentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/context.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/context.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/editTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/mytopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/register2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/register2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/replyList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/topicContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +133,7 @@
       <workItem from="1652111299907" duration="12016000" />
       <workItem from="1652151255317" duration="13605000" />
       <workItem from="1652165082965" duration="236000" />
-      <workItem from="1652166141094" duration="3275000" />
+      <workItem from="1652166141094" duration="4135000" />
     </task>
     <servers />
   </component>
