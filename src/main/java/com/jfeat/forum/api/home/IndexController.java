@@ -68,7 +68,6 @@ public class IndexController {
     }
     @RequestMapping("/register")
     public String register(){
-
         return "home/register";
     }
 

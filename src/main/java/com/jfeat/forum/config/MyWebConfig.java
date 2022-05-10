@@ -39,8 +39,8 @@ public class MyWebConfig extends WebMvcConfigurationSupport {
 
         registry.addResourceHandler("/**")
 //                .addResourceLocations("classpath:/resources/")
-                .addResourceLocations("classpath:/static/")
-                .addResourceLocations("classpath:/templates/");
+                .addResourceLocations("classpath:/static/");
+//                .addResourceLocations("classpath:/templates/");
         registry.addResourceHandler("/upload/**/").addResourceLocations("file:"+ Constants.FILE_UPLOAD_DIC);
     }
 /*页面跳转*/
