@@ -32,7 +32,7 @@ public class adminUserController {
     public String userManage(ModelMap modelMap){
         modelMap.addAttribute("path","usermanage");
 
-        return "/admin/userManage";
+        return "admin/userManage";
     }
     @RequestMapping(value = "/users/list",method = RequestMethod.GET)
     @ResponseBody
@@ -58,7 +58,7 @@ public class adminUserController {
     @RequestMapping("profile")
     public String profile(ModelMap modelMap){
         modelMap.addAttribute("path","profile");
-        return "/admin/profile";
+        return "admin/profile";
     }
 
 

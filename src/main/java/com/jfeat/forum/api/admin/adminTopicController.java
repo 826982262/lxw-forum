@@ -32,7 +32,7 @@ public class adminTopicController {
     @RequestMapping("")
     public String topicManage(ModelMap modelMap){
         modelMap.addAttribute("path","topicmanage");
-        return "/admin/topicManage";
+        return "admin/topicManage";
     }
     @ResponseBody
     @RequestMapping("/list")

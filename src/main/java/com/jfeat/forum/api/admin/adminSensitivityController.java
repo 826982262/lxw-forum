@@ -34,13 +34,13 @@ public class adminSensitivityController {
     @RequestMapping("/updateword")
     public String updateWord(ModelMap modelMap){
         modelMap.addAttribute("path","updateword");
-        return "/admin/updateword";
+        return "admin/updateword";
     }
 
     @RequestMapping("")
     public String sensitivity(ModelMap modelMap,@RequestParam(value = "audit",required = false)Integer audit){
         modelMap.addAttribute("path","sensitivity");
-        return "/admin/sensitivityManage";
+        return "admin/sensitivityManage";
     }
 
 

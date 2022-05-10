@@ -7,7 +7,13 @@
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminSensitivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminSensitivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminTopicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jfeat/forum/api/admin/adminSensitivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jfeat/forum/api/admin/adminSensitivityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jfeat/forum/api/admin/adminUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jfeat/forum/api/admin/adminUserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +44,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/upload" />
@@ -132,12 +139,23 @@
       <workItem from="1652111299907" duration="12016000" />
       <workItem from="1652151255317" duration="13605000" />
       <workItem from="1652165082965" duration="236000" />
-      <workItem from="1652166141094" duration="16000" />
+      <workItem from="1652166141094" duration="1355000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

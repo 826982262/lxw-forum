@@ -27,8 +27,8 @@ spring:
       enabled: true
     converters:
       preferred-json-mapper: fastjson
-#  jackson:
-#    date-format: yyyy-MM-dd HH:mm:ss
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 
 
 crud-plus:
