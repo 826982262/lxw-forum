@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改话题</title>
+    <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="/js/jquery/jquery.min.js" language="javascript"></script>
+    <script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.js" language="javascript"></script>
+    <link href="/css/common.css" rel="stylesheet" type="text/css"/>
+    <script th:src="@{/js/sweetalert.min.js}" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript" th:src="@{/js/jquery/jquery.letterAvatar.js}" language="javascript"></script>
+    <script th:src="@{/js/jquery/readmore.min.js}"></script>
+    <script th:src="@{/plugins/wangEditor/wangEditor.min.js}"></script>
+    <script src="/js/tool.js"></script>
+    <script type="text/javascript" th:src="@{/js/layer/layer.js}" language="javascript"></script>
+    <link href="/js/imageZoom/style.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" th:src="@{/js/ajax.js}" type="text/javascript"></script>
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css}">
+    <script src="/plugins/highlight.min.js"></script>
+    <link href="/plugins/atom-one-dark.min.css" rel="stylesheet">
+</head>
+<body>
+<!--引入页头-->
+<div th:replace="/reception/index ::index-head"></div>
+<div th:if="${session.user!=null}">
+
+
+
+    <div class="topic-formModule" style="margin-top: 75px">
+
+        <div class="addTopic-wrap">
+            <button class="btn btn-primary" type="submit" onClick="javascript:history.go(-1)">返回</button>
+            <form id="addTopicForm" th:action="'/forum/user/topic/edit?topicId='+${topic.tId}" method="post" style="margin-top: 5px">
+
+                <!--                     提交后跳转参数  参数必须经过encodeBase64URL编码后才能提交 不填写时默认跳转回当前页 -->
+                <input type="hidden" id="jumpUrl" name="jumpUrl" value="">
+
+                <div style="height: 50px;">
+                    <div style="float:left; *margin-top: 5px;">
+                        <select id="tagId" name="tagId" class="formSelect" >
+                            <option th:value="${topic.lId}" th:text="${topic.lName}">选择标签</option>
+                            <!--                                 引入标签选择 -->
+                            <th:block th:each="tag :${tags}">
+                                <option th:value="${tag.lId}" th:text="${tag.lName}"></option>
+                            </th:block>
+                        </select>
+                        <span id="tagId_error" class="error" name="error"></span>
+                    </div>
+                    <div style="float:left;margin-left: 5px;">
+
+                        <input type="text" id="title" name="title" class="formText" size="90" th:value="${topic.title}" alt="标题" title="标题" placeholder="标题"/>
+                        <span id="title_error" class="error" name="error"></span>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div id="div1" th:utext="${topic.content}"></div>
+                    <textarea style="display: none;" name="word" id="text1"></textarea>
+                </div>
+
+                <span id="content_error" class="error" name="error"></span>
+                <span id="topic_error" class="error" name="error"></span>
+                <div class="form-action">
+
+
+                    <div class="topicSubmit" >
+                        <!--
+                        <span class="submitButton"><INPUT type="button" value="提交" onClick="javascript:sureSubmit(this.form)"></span> -->
+                        <span class="submitButton"style="float: left"><INPUT id="submitForm" type="button" value="提交" onClick="javascript:ajax_editSubmit()" ></span>
+<!--                        <span class="submitButton"  style="float: right"><INPUT id="" type="button" value="返回" ></span>-->
+                    </div>
+
+
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script language="javascript" type="text/javascript">
+
+
+
+    //解决提交按钮的click和富文本的blur事件冲突
+    $(document).ready(function(){
+        $("input[type='button']").mousedown(function(e){
+            e.preventDefault();
+        });
+    });
+
+    //表单Form方式提交
+    function sureSubmit(obj){
+        obj.submit();
+    }
+    //Ajax方式提交
+    function ajax_editSubmit(){
+
+        var parameter = "";
+        var  topicId= getUrlParam("topicId")
+        if(topicId==null){ return;}
+        //标签
+        var tagId = document.getElementById("tagId");
+
+        var index = tagId.selectedIndex; // 选中索引
+
+        var tagId_text = tagId.options[index].text; // 选中文本
+        var tagId_value = tagId.options[index].value; // 选中值
+
+        parameter += "&tId="+encodeURIComponent(topicId);
+        //获取标签id
+        parameter += "&lId="+encodeURIComponent(tagId_value);
+        /*选中的文本*/
+        parameter += "&lName="+encodeURIComponent(tagId_text);
+        //获取标题
+        var title = document.getElementById("title").value;
+        parameter += "&title="+encodeURIComponent(title);
+
+        //获取内容
+        var content = document.getElementById("text1").value;
+
+        parameter += "&content="+encodeURIComponent((content));
+
+
+        //删除第一个&号,防止因为多了&号而出现警告: Parameters: Invalid chunk ignored.信息
+        if(parameter.indexOf("&") == 0){
+            parameter = parameter.substring(1,parameter.length);
+        }
+
+        var DataDeal = {
+            //
+            formToJson: function (data) {
+                data=data.replace(/&/g,"\",\"");
+                data=data.replace(/=/g,"\":\"");
+                data="{\""+data+"\"}";
+                return data;
+            },
+        };
+
+        parameter = DataDeal.formToJson(parameter)
+        json_post_ruquest(   function(res) {
+
+            if (res.success==true) {
+                swal({
+                    title: res.message,
+                    // text: "",
+                    icon: "success",
+                    button: true,
+                    dangerModel: true,
+                    timer: 3000
+                }).then((flag)=>{
+                    if(flag){
+                       window.location.href='/thread?topicId='+topicId;
+                    }
+                })
+
+            }else {
+
+                swal({
+                    title: res.message,
+                    icon: "error",
+                })
+            }
+        },"/forum/user/doEditTopic?timestamp=" + new Date().getTime(),true,parameter);
+    }
+
+
+</script>
+<script language="JavaScript" type="text/javascript" th:if="${session.user!=null}" >
+
+    const E = window.wangEditor
+    const editor = new E('#div1')
+    const $text1 = $('#text1')
+    //插入代码语言配置
+    editor.config.languageType = [
+        'Bash',
+        'C',
+        'C#',
+        'C++',
+        'CSS',
+        'Java',
+        'JavaScript',
+        'JSON',
+        'TypeScript',
+        'Plain text',
+        'Html',
+        'XML',
+        'SQL',
+        'Go',
+        'Kotlin',
+        'Lua',
+        'Markdown',
+        'PHP',
+        'Python',
+        'Shell Session',
+        'Ruby',
+    ];
+
+
+    // 设置层级
+    editor.config.uploadImgServer="/upload/topicfile"
+    editor.config.uploadImgHooks ={
+        customInsert:function (insertImgFn,result) {
+
+            // result 即服务端返回的接口
+
+
+
+            for ( x in result) {
+                insertImgFn(result[x].url);
+                console.log('customInsert', result[x].url)
+            }
+        }
+    }
+    editor.config.zIndex = 1
+    // 挂载代码高亮
+    editor.highlight = hljs
+    //设置高度
+    editor.config.height = 500
+    //数据同步在text区域，方便提交
+
+    editor.config.onchange = function (html) {
+        // const safeHtml = xss(html)
+        // 第二步，监控变化，同步更新到 textarea
+        //    xss过滤
+        // const safeHtml = filterXSS(html)
+        // $text1.val(safeHtml)
+        $text1.val(html)
+    }
+    // 创建编辑器
+    editor.create()
+    $text1.val(editor.txt.html())
+    // 第一步，初始化 textarea 的值
+    // $text1.val(editor.txt.html('<p></p>'))
+</script>
+</body>
+</html>

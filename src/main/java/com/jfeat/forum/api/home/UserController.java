@@ -191,7 +191,7 @@ public class UserController {
         request.setAttribute("topic",topic);
         request.setAttribute("tags",labelList);
 
-        return "home/editTopic";
+        return "reception/editTopic";
     }
     @userLogin
     @ResponseBody
@@ -264,7 +264,7 @@ public class UserController {
         request.setAttribute("totalPage",totalPage);
         request.setAttribute("page",page);
         model.addAttribute("path","mytopic");
-        return "home/mytopic";
+        return "reception/mytopic";
     }
 
 

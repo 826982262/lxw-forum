@@ -63,12 +63,12 @@ public class IndexController {
         request.setAttribute("page",page);
         request.setAttribute("totalPage",totalPage);
         request.setAttribute("total",total);
-        return "home/index";
+        return "reception/index";
 
     }
     @RequestMapping("/register")
     public String register(){
-        return "home/register";
+        return "reception/register";
     }
 
 
@@ -83,7 +83,7 @@ public class IndexController {
     @RequestMapping("/context")
     public String context(){
 
-        return "home/context";
+        return "reception/context";
     }
 
 

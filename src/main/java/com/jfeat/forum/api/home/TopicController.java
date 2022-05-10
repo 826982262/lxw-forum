@@ -110,7 +110,7 @@ public class TopicController {
         request.setAttribute("total",total);
         request.setAttribute("totalPage",totalPage);
         request.setAttribute("page",page);
-        return "home/topicContent";
+        return "reception/topicContent";
     }
 }
 
