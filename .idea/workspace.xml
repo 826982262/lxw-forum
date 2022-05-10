@@ -7,7 +7,67 @@
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/admin/dist/js/plugins/chartjs2/docs/gitbook/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/themify-icons/fonts/themify.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/themify-icons/fonts/themify.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/themify-icons/fonts/themify.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/themify-icons/fonts/themify.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/themify-icons/fonts/themify.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/themify-icons/fonts/themify.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/next.cur" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/next.cur" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/pre.cur" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/pre.cur" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/zoom_in.cur" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/zoom_in.cur" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/zoom_out.cur" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/imageZoom/img/zoom_out.cur" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/Uploader.swf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/Uploader.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/images/swfupload.swf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/plugins/multiimage/images/swfupload.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/darkGray/fonts/fontawesome.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/darkGray/fonts/fontawesome.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/darkGray/fonts/fontawesome.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/darkGray/fonts/fontawesome.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/darkGray/fonts/fontawesome.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/darkGray/fonts/fontawesome.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/minimalist/fonts/remixicon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/minimalist/fonts/remixicon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/minimalist/fonts/remixicon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/minimalist/fonts/remixicon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/minimalist/fonts/remixicon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/kindeditor/themes/minimalist/fonts/remixicon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/spin/spin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/spin/spin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/commentList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/context.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/editTopic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/editUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/mytopic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/register2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/replyList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home/topicContent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/editTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/editTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/mytopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/mytopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/topicContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/topicContent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/forum-main-1.0.0-standalone.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/forum-main-1.0.0-standalone.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/forum-main-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/forum-main-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/swagger/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/gzhh/forum/util/TestMapper.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +193,7 @@
       <workItem from="1652111299907" duration="12016000" />
       <workItem from="1652151255317" duration="13605000" />
       <workItem from="1652165082965" duration="236000" />
-      <workItem from="1652166141094" duration="4135000" />
+      <workItem from="1652166141094" duration="5342000" />
     </task>
     <servers />
   </component>

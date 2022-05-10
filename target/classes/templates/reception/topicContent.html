@@ -22,7 +22,7 @@
 </head>
 <body>
 <!--引入页头-->
-<div th:replace="/reception/index ::index-head"></div>
+<div th:replace="reception/index ::index-head"></div>
 <!--文章内容-->
 
 <div class="skeleton">
@@ -370,7 +370,7 @@
 <!--    <#else>-->
 <!--    未登录 -->
                 <th:block th:if="${session.user == null}">
-                    <div th:replace="/reception/index ::footLogin"></div>
+                    <div th:replace="reception/index ::footLogin"></div>
                 </th:block>
 <!--</#if>-->
 <!--<#else><#&#45;&#45; 不允许评论 &ndash;&gt;-->
@@ -493,7 +493,7 @@
 
 
 <!--引入页脚-->
-<div th:replace="/reception/index :: foot"></div>
+<div th:replace="reception/index :: foot"></div>
 </body>
 
 </html>
