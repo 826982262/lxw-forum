@@ -1,0 +1,40 @@
+@endpoint=http://webapp.metagugu.net/api/crud/oms/player/players
+@endpoint=http://api.dev.smallsaas.cn:8084
+
+@admin= Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEiLCJ1c2VySWQiOiIxIiwidGVuYW50T3JnSWQiOjEsImFjY291bnQiOiJhZG1pbiIsInVzZXJUeXBlIjoxMDAsImRldlVzZXJUeXBlIjowLCJiVXNlclR5cGUiOiJTWVNURU0iLCJpYXQiOjE2NDE2MTE2OTAsImp0aSI6IjEiLCJzdWIiOiJhZG1pbiIsImV4cCI6MTY0MTg3MDg5MH0.m_n08WQoLSdqZZeb97ki7hSEKtUnbalso1lSS7A3J0GBmriJ_arEhMJ5ekgSmTVfSODK2z3F2_c_cyRPQCnDVQ
+
+### 我创建系统号
+POST {{endpoint}}/api/crud/oms/player/players
+Authorization: {{admin}}
+
+{
+    "name": "13222333445",
+    "mobilePhone": 13222333445,
+    "backupMobilePhone": 13222333445,
+    "isManager": 1,
+    "alipayAccount": "111",
+    "wechatAccount": "111",
+    "bankAccountName": "11",
+    "bankAccountNumber": 111,
+    "sysUserId": "876708082437197885"
+}
+
+
+# {
+#   "name": "derekxth22",
+#   "mobilePhone": 18689911293,
+#   "firstMobilePhoneCode": "1234",
+#   "backupMobilePhone": 18689911293,
+#   "secondMobilePhoneCode": "1234",
+#   "paymentPassword": "123456",
+#   "loginPassword": "123456",
+#   "checkPaymentPassword": "123456",
+#   "checkLoginPassword": "123456",
+#   "isManager": 1,
+#   "sysUserId": "5",
+#   "alipayAccount": "11111",
+#   "wechatAccount": "2222",
+#   "bankAccountName": "ddd",
+#   "bankAccountNumber": 1111
+# }
+
