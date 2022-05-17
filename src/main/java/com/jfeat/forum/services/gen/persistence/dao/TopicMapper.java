@@ -35,4 +35,6 @@ public interface TopicMapper extends BaseMapper<Topic> {
     List<Topic> selectTopicByUid(@Param("uid")Long uid,
                                  @Param("start") Integer start,
                                  @Param("limit") Integer limit);
+
+    Integer UpdateAuditById(@Param("topicId")Long topicId,@Param("audit") Integer audit);
 }

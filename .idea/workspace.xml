@@ -5,15 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/util/ErrorView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/PathUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/UUIDUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/Verification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/YmlUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/fileSystem/FileManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/fileSystem/localImpl/LocalFileManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_1_1_jre.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/UserEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/UserEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/topic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/topicManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/topicManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/gzhh/forum/util/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jfeat/forum/TestMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -39,7 +100,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/upload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,33 +112,73 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jfeat.forum.api.util" />
+      <recent name="com.jfeat.forum.util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\林学文\Desktop\lxw-forum\src\main\java\com\jfeat\forum\util" />
       <recent name="C:\Users\林学文\Desktop\forum\src\main\resources\static\upload" />
       <recent name="C:\Users\林学文\Desktop\forum\src\main\java\com\jfeat\forum\api\home" />
       <recent name="C:\Users\林学文\Desktop\forum\src" />
       <recent name="C:\Users\林学文\Desktop\forum\src\main\java\com\jfeat\forum\api" />
-      <recent name="C:\Users\林学文\Desktop\forum\src\main\java\com\jfeat\forum" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jfeat.forum.util" />
+      <recent name="com.jfeat.forum.config" />
       <recent name="com.jfeat.forum.model" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AmApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+    <configuration name="TestMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum-main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.gzhh.forum.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.gzhh.forum.util" />
+      <option name="MAIN_CLASS_NAME" value="edu.gzhh.forum.util.TestMapper" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMapper.testService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="label" />
+    <configuration name="TestMapper.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum-main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jfeat.forum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jfeat.forum" />
+      <option name="MAIN_CLASS_NAME" value="com.jfeat.forum.TestMapper" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMapper.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum-main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.gzhh.forum.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.gzhh.forum.util" />
+      <option name="MAIN_CLASS_NAME" value="edu.gzhh.forum.util.TestMapper" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMapper.testService (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum-main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.gzhh.forum.util.*" />
@@ -109,14 +210,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestMapper.testService" />
+      <item itemvalue="JUnit.TestMapper.test" />
+      <item itemvalue="JUnit.TestMapper" />
+      <item itemvalue="JUnit.TestMapper.testService (1)" />
+      <item itemvalue="JUnit.TestMapper.test (1)" />
       <item itemvalue="Spring Boot.AmApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AmApplication" />
-        <item itemvalue="Spring Boot.AmApplication" />
-        <item itemvalue="JUnit.TestMapper.testService" />
+        <item itemvalue="JUnit.TestMapper.test (1)" />
+        <item itemvalue="JUnit.TestMapper.test" />
+        <item itemvalue="JUnit.TestMapper.testService (1)" />
+        <item itemvalue="JUnit.TestMapper" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +237,12 @@
       <workItem from="1652111299907" duration="12016000" />
       <workItem from="1652151255317" duration="13605000" />
       <workItem from="1652165082965" duration="236000" />
-      <workItem from="1652166141094" duration="6179000" />
+      <workItem from="1652166141094" duration="7566000" />
+      <workItem from="1652193842262" duration="3815000" />
+      <workItem from="1652322126565" duration="1943000" />
+      <workItem from="1652324136279" duration="998000" />
+      <workItem from="1652702028877" duration="13054000" />
+      <workItem from="1652797757976" duration="7892000" />
     </task>
     <servers />
   </component>
@@ -148,6 +259,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -164,12 +276,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
-          <line>134</line>
+          <line>156</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
-          <line>154</line>
+          <line>176</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -199,17 +311,17 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java</url>
-          <line>67</line>
+          <line>68</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java</url>
-          <line>69</line>
+          <line>70</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -221,6 +333,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/ReplyController.java</url>
           <line>45</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
+          <line>297</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/edu/gzhh/forum/util/TestMapper.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java</url>

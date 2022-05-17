@@ -84,7 +84,7 @@ import java.util.List;
     @PutMapping("/{id}")
     @ApiOperation(value = "修改 User",response = User.class)
     public Tip updateUser(@PathVariable Long id,@RequestBody User entity){
-        entity.setId(id);
+             entity.setId(id);
                 return SuccessTip.create(userService.updateMaster(entity));
             }
 
@@ -121,21 +121,21 @@ import java.util.List;
     @RequestParam(name = "tag" , required = false)String tag,
     // end tag
     @RequestParam(name = "search", required = false) String search,
-                                                                                                                                        
-                                                                                                                            @RequestParam(name = "account", required = false) String account,
-                    
-                                                                                                                            @RequestParam(name = "uname", required = false) String uname,
-                    
-                                                                                                                            @RequestParam(name = "password", required = false) String password,
-                    
-                                                                                                                            @RequestParam(name = "email", required = false) String email,
-                    
-                                                                                                                                    @RequestParam(name = "flag", required = false) Integer flag,
-                    
-                                                                                                                                    @RequestParam(name = "headUrl", required = false) String headUrl,
-                    
-                                                                                                            @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-                                                @RequestParam(name = "createTime", required = false) Date createTime,
+
+    @RequestParam(name = "account", required = false) String account,
+
+    @RequestParam(name = "uname", required = false) String uname,
+
+    @RequestParam(name = "password", required = false) String password,
+
+    @RequestParam(name = "email", required = false) String email,
+
+    @RequestParam(name = "flag", required = false) Integer flag,
+
+    @RequestParam(name = "headUrl", required = false) String headUrl,
+
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @RequestParam(name = "createTime", required = false) Date createTime,
         @RequestParam(name = "orderBy", required = false) String orderBy,
         @RequestParam(name = "sort", required = false)  String sort) {
                     

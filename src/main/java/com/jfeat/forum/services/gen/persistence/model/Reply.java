@@ -56,7 +56,7 @@ public class Reply extends Model<Reply> {
       @ApiModelProperty(value = "回复内容")
       private String content;
 
-      @ApiModelProperty(value = "0为未审核，1为待人工审核，2为审核通过，3为不通过")
+      @ApiModelProperty(value = "0为未审核，1为待人工审核，2为审核通过，3为不通过,4为隐藏")
       private Integer audit;
 
     /**

@@ -139,4 +139,29 @@ public class UserServiceImpl extends CRUDUserServiceImpl implements UserService 
         }
 
     }
-                            }
+
+    @Override
+    public User selectUserById(Long id) {
+        return userMapper.selectUserById(id);
+    }
+
+    @Override
+    public ResponseResult updateUserHead(Long id,String url) {
+
+              Integer flag =  userMapper.updateUserHeadUrlById(id,url);
+              if (flag>0){ return   new ResponseResult(CommonCode.SUCCESS); }else {return new ResponseResult(CommonCode.FAIL);}
+
+    }
+
+    @Override
+    public ResponseResult updateUserById(Long id, String uname, String oldPassword, String password) {
+        String oldpassword = DigestUtil.md5Hex(oldPassword);
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("id",id);
+        User user =  userMapper.selectOne(queryWrapper);
+        if (!user.getPassword().equals(oldpassword))
+        {  ExceptionCast.cast(CommonCode.LOGINERROR); }
+        Integer flag = userMapper.updateUserById(id,uname,DigestUtil.md5Hex(password));
+        if (flag>0){ return   new ResponseResult(CommonCode.SUCCESS); }else {return new ResponseResult(CommonCode.FAIL);}
+    }
+}

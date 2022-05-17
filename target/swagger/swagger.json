@@ -1,0 +1,1468 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Parent pom providing dependency and plugin management for applications\n\t\tbuilt with Maven",
+    "version" : "1.0.0",
+    "title" : "forum-main"
+  },
+  "tags" : [ {
+    "name" : "Comment"
+  }, {
+    "name" : "Label"
+  }, {
+    "name" : "Reply"
+  }, {
+    "name" : "Sensitivity"
+  }, {
+    "name" : "Topic"
+  }, {
+    "name" : "User"
+  }, {
+    "name" : "forum"
+  } ],
+  "paths" : {
+    "/api/crud/comment/comment/comments" : {
+      "get" : {
+        "tags" : [ "Comment" ],
+        "summary" : "Comment 列表信息",
+        "description" : "",
+        "operationId" : "queryCommentPage",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date-time"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Comment对象"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Comment" ],
+        "summary" : "新建 Comment",
+        "description" : "",
+        "operationId" : "createComment",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Comment对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Comment对象"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/comment/comment/comments/{id}" : {
+      "get" : {
+        "tags" : [ "Comment" ],
+        "summary" : "查看 Comment",
+        "description" : "",
+        "operationId" : "getComment",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Comment对象"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Comment" ],
+        "summary" : "修改 Comment",
+        "description" : "",
+        "operationId" : "updateComment",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Comment对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Comment对象"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Comment" ],
+        "summary" : "删除 Comment",
+        "description" : "",
+        "operationId" : "deleteComment",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Tip"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/label/label/labels" : {
+      "get" : {
+        "tags" : [ "Label" ],
+        "summary" : "Label 列表信息",
+        "description" : "",
+        "operationId" : "queryLabelPage",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Label对象"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Label" ],
+        "summary" : "新建 Label",
+        "description" : "",
+        "operationId" : "createLabel",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Label对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Label对象"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/label/label/labels/{id}" : {
+      "get" : {
+        "tags" : [ "Label" ],
+        "summary" : "查看 Label",
+        "description" : "",
+        "operationId" : "getLabel",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Label对象"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Label" ],
+        "summary" : "修改 Label",
+        "description" : "",
+        "operationId" : "updateLabel",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Label对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Label对象"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Label" ],
+        "summary" : "删除 Label",
+        "description" : "",
+        "operationId" : "deleteLabel",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Tip"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/reply/reply/replyies" : {
+      "get" : {
+        "tags" : [ "Reply" ],
+        "summary" : "Reply 列表信息",
+        "description" : "",
+        "operationId" : "queryReplyPage",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date-time"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Reply对象"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Reply" ],
+        "summary" : "新建 Reply",
+        "description" : "",
+        "operationId" : "createReply",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Reply对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Reply对象"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/reply/reply/replyies/{id}" : {
+      "get" : {
+        "tags" : [ "Reply" ],
+        "summary" : "查看 Reply",
+        "description" : "",
+        "operationId" : "getReply",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Reply对象"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Reply" ],
+        "summary" : "修改 Reply",
+        "description" : "",
+        "operationId" : "updateReply",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Reply对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Reply对象"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Reply" ],
+        "summary" : "删除 Reply",
+        "description" : "",
+        "operationId" : "deleteReply",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Tip"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/sensitivity/sensitivity/sensitivityies" : {
+      "get" : {
+        "tags" : [ "Sensitivity" ],
+        "summary" : "Sensitivity 列表信息",
+        "description" : "",
+        "operationId" : "querySensitivityPage",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date-time"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Sensitivity对象"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Sensitivity" ],
+        "summary" : "新建 Sensitivity",
+        "description" : "",
+        "operationId" : "createSensitivity",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Sensitivity对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Sensitivity对象"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/sensitivity/sensitivity/sensitivityies/{id}" : {
+      "get" : {
+        "tags" : [ "Sensitivity" ],
+        "summary" : "查看 Sensitivity",
+        "description" : "",
+        "operationId" : "getSensitivity",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Sensitivity对象"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Sensitivity" ],
+        "summary" : "修改 Sensitivity",
+        "description" : "",
+        "operationId" : "updateSensitivity",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Sensitivity对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Sensitivity对象"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Sensitivity" ],
+        "summary" : "删除 Sensitivity",
+        "description" : "",
+        "operationId" : "deleteSensitivity",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Tip"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/topic/topic/topics" : {
+      "get" : {
+        "tags" : [ "Topic" ],
+        "summary" : "Topic 列表信息",
+        "description" : "",
+        "operationId" : "queryTopicPage",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date-time"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date-time"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Topic对象"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Topic" ],
+        "summary" : "新建 Topic",
+        "description" : "",
+        "operationId" : "createTopic",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Topic对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Topic对象"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/topic/topic/topics/{id}" : {
+      "get" : {
+        "tags" : [ "Topic" ],
+        "summary" : "查看 Topic",
+        "description" : "",
+        "operationId" : "getTopic",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Topic对象"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Topic" ],
+        "summary" : "修改 Topic",
+        "description" : "",
+        "operationId" : "updateTopic",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Topic对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Topic对象"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Topic" ],
+        "summary" : "删除 Topic",
+        "description" : "",
+        "operationId" : "deleteTopic",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Tip"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/user/user/users" : {
+      "get" : {
+        "tags" : [ "User" ],
+        "summary" : "User 列表信息",
+        "description" : "",
+        "operationId" : "queryUserPage",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date-time"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User对象"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "User" ],
+        "summary" : "新建 User",
+        "description" : "",
+        "operationId" : "createUser",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/User对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User对象"
+            }
+          }
+        }
+      }
+    },
+    "/api/crud/user/user/users/{id}" : {
+      "get" : {
+        "tags" : [ "User" ],
+        "summary" : "查看 User",
+        "description" : "",
+        "operationId" : "getUser",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User对象"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "User" ],
+        "summary" : "修改 User",
+        "description" : "",
+        "operationId" : "updateUser",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/User对象"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/User对象"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "User" ],
+        "summary" : "删除 User",
+        "description" : "",
+        "operationId" : "deleteUser",
+        "parameters" : [ {
+          "name" : "",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Tip"
+            }
+          }
+        }
+      }
+    },
+    "/forum/comment/add" : {
+      "post" : {
+        "tags" : [ "forum" ],
+        "summary" : "添加文章",
+        "description" : "",
+        "operationId" : "addComment",
+        "parameters" : [ {
+          "name" : "topicId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "content",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "topicUid",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseResult"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Comment对象" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "ID"
+        },
+        "uid" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "用户id\r\n"
+        },
+        "uname" : {
+          "type" : "string"
+        },
+        "account" : {
+          "type" : "string"
+        },
+        "headUrl" : {
+          "type" : "string"
+        },
+        "toUid" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "接收者id"
+        },
+        "topicId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "话题Id "
+        },
+        "content" : {
+          "type" : "string",
+          "description" : "评论内容 "
+        },
+        "postTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "评论时间"
+        },
+        "replyList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reply对象"
+          }
+        },
+        "totalReply" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "总回复数"
+        },
+        "audit" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "0为未审核，1为待人工审核，2为审核通过，3为不通过"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Reply对象"
+          }
+        }
+      }
+    },
+    "Label对象" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "id"
+        },
+        "getlName" : {
+          "type" : "string",
+          "description" : "标签名"
+        },
+        "ranking" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "排序值"
+        }
+      }
+    },
+    "Reply对象" : {
+      "type" : "object",
+      "properties" : {
+        "replyId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Id"
+        },
+        "commentuId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "commentId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "评论Id"
+        },
+        "uid" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "用户"
+        },
+        "topicId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "话题Id"
+        },
+        "time" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "回复时间 "
+        },
+        "content" : {
+          "type" : "string",
+          "description" : "回复内容"
+        },
+        "audit" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "0为未审核，1为待人工审核，2为审核通过，3为不通过,4为隐藏"
+        },
+        "uname" : {
+          "type" : "string"
+        },
+        "account" : {
+          "type" : "string"
+        },
+        "headUrl" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseResult" : {
+      "type" : "object",
+      "properties" : {
+        "success" : {
+          "type" : "boolean"
+        },
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "jumpUri" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Sensitivity对象" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "id"
+        },
+        "topicId" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "所属文章id"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : "类型"
+        },
+        "cid" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "审核内容的id"
+        },
+        "content" : {
+          "type" : "string",
+          "description" : "审核的内容"
+        },
+        "createTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "创建时间"
+        },
+        "senWord" : {
+          "type" : "string",
+          "description" : "敏感内容"
+        },
+        "audit" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "审核状态0为未审核，1为审核通过，2为审核不通过，3为文章发布状态"
+        }
+      }
+    },
+    "Tip" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Topic对象" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "话题id"
+        },
+        "getlId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "getlName" : {
+          "type" : "string"
+        },
+        "uid" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "time" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "updateTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "更新时间"
+        },
+        "headUrl" : {
+          "type" : "string"
+        },
+        "uname" : {
+          "type" : "string"
+        },
+        "content" : {
+          "type" : "string",
+          "description" : "内容"
+        },
+        "summary" : {
+          "type" : "string",
+          "description" : "内容摘要"
+        },
+        "commentTotal" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "评论总数"
+        },
+        "istop" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "s是否置顶"
+        },
+        "audit" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "0为未审核，1为待人工审核，2为审核通过，3为不通过"
+        },
+        "contentFilter" : {
+          "type" : "string"
+        }
+      }
+    },
+    "User对象" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "用户ID"
+        },
+        "account" : {
+          "type" : "string"
+        },
+        "uname" : {
+          "type" : "string",
+          "description" : "用户名"
+        },
+        "password" : {
+          "type" : "string",
+          "description" : "密码"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "邮箱"
+        },
+        "flag" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "权限"
+        },
+        "headUrl" : {
+          "type" : "string",
+          "description" : "头像地址"
+        },
+        "createTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "创建时间"
+        }
+      }
+    }
+  }
+}

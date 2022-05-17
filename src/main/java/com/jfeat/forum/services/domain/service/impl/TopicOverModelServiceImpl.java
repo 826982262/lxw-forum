@@ -64,6 +64,7 @@ public class TopicOverModelServiceImpl extends CRUDTopicOverModelServiceImpl imp
         }
 
         queryWrapper.ne("audit",3);
+        queryWrapper.ne("audit",4);
         long total =  topicMapper.selectCount(queryWrapper);
         List<TopicPo> topicLists = topicMapper.selectAllIndexTopicByLabelId(tagId,start,limit,keyword);
         QueryResult<TopicPo> queryResult = new QueryResult<>();

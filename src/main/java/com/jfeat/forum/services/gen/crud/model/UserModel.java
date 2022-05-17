@@ -17,4 +17,5 @@ public class UserModel extends User{
 
     /*验证码*/
     private String captchaValue;
+    private String oldPassword;
 }

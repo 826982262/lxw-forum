@@ -22,4 +22,10 @@ public interface UserService extends CRUDUserService{
     /*查询用户*/
     QueryResult selectUserList(PageQueryUtil pageQueryUtil);
     ResponseResult updateUsersFlag(List<Long> Ids, Integer flag);
+    User selectUserById(Long id);
+
+
+    ResponseResult updateUserHead(Long id, String url);
+
+    ResponseResult updateUserById(Long id, String uname, String oldPassword, String password);
 }

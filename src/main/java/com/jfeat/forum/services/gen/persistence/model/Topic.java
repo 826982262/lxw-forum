@@ -37,7 +37,7 @@ public class Topic extends Model<Topic> {
     private Long uid;
 
     private String title;
-
+    @JsonFormat(timezone = "GMT+8" , pattern = "yyyy:MM:dd HH:mm:ss")
     private Date time;
     @JsonFormat(timezone = "GMT+8" , pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "更新时间")

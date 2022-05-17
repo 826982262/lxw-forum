@@ -18,4 +18,10 @@ public interface UserMapper extends BaseMapper<User> {
     List<User> selectUserOrderByTime(@Param("start") Integer start, @Param("limit") Integer limit);
 
     Integer updateUsersFlagByUids(@Param("ids") List<Long> ids,@Param("flag") Integer flag);
+
+    User selectUserById(@Param("id")Long id);
+
+    Integer updateUserHeadUrlById(@Param("id")Long id,@Param("url")String url);
+
+    Integer updateUserById(@Param("id")Long id, @Param("uname")String uname, @Param("password")String password);
 }
