@@ -62,7 +62,7 @@
         left   join
             user as b
         on a.uid=b.id
-        where a.id = #{topicId}
+        where a.id = #{topicId} and (a.audit!=3 or a.audit!=4)
     </select>
     <select id="selectCheckTopic" resultType="com.jfeat.forum.services.gen.persistence.model.Topic">
 
