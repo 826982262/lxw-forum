@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jfeat.forum.services.gen.persistence.dao.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jfeat.forum.services.gen.persistence.model.User">
+        <id column="id" property="id" />
+        <result column="account" property="account" />
+        <result column="uname" property="uname" />
+        <result column="password" property="password" />
+        <result column="email" property="email" />
+        <result column="flag" property="flag" />
+        <result column="head_url" property="headUrl" />
+        <result column="createTime" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, account, uname, password, email, flag, head_url, createTime
+    </sql>
+    <select id="selectUserOrderByTime" resultType="com.jfeat.forum.services.gen.persistence.model.User">
+        select id,account,uname,email,flag,createTime
+        from user
+        order by createTime asc
+            limit #{start},#{limit}
+    </select>
+    <select id="selectUserById" resultType="com.jfeat.forum.services.gen.persistence.model.User">
+        select * from user where id = #{id}
+    </select>
+
+    <update id="updateUsersFlagByUids" parameterType="java.util.List">
+        <foreach collection="ids" index="index" item="item" open="" close="" separator=";">
+            update user
+            set flag = #{flag}
+            where id = #{item}
+        </foreach>
+    </update>
+    <update id="updateUserHeadUrlById">
+        update user
+        set head_url = #{url}
+        where id = #{id}
+    </update>
+    <update id="updateUserById">
+        update user
+        set uname = #{uname},password=#{password}
+        where id = #{id}
+    </update>
+</mapper>

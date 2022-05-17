@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jfeat.forum.services.domain.dao.QueryUserDao">
+                                                                                                                                                                                                                                                                                                            <sql id="Base_Column_List">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                user.id, user.account, user.uname, user.password, user.email, user.flag, user.head_url AS headUrl, user.createTime
+    </sql>
+
+    
+    
+    <select id="queryMasterModel" resultType="UserModel">
+       SELECT user.*
+       FROM user
+       WHERE user.id=#{id}
+       GROUP BY user.id
+    </select>
+
+
+
+                                
+    <select id="findUserPage" resultType="UserRecord" parameterType="UserRecord">
+            SELECT <include refid="Base_Column_List"/>
+
+        
+
+        FROM user
+
+        
+        
+        WHERE 1=1
+        
+
+        
+                                                                            <if test="record.id != null and record.id>0 ">
+                                    AND user.id LIKE CONCAT('%',#{record.id},'%')
+                            </if>
+                                                                    <if test="record.account != null and record.account!= ''">
+                                    AND user.account LIKE CONCAT('%',#{record.account},'%')
+                            </if>
+                                                                    <if test="record.uname != null and record.uname!= ''">
+                                    AND user.uname LIKE CONCAT('%',#{record.uname},'%')
+                            </if>
+                                                                    <if test="record.password != null and record.password!= ''">
+                                    AND user.password LIKE CONCAT('%',#{record.password},'%')
+                            </if>
+                                                                    <if test="record.email != null and record.email!= ''">
+                                    AND user.email LIKE CONCAT('%',#{record.email},'%')
+                            </if>
+                                                                    <if test="record.flag != null and record.flag>0 ">
+                                    AND user.flag LIKE CONCAT('%',#{record.flag},'%')
+                            </if>
+                                                                    
+
+                                                                                        <if test="record.headUrl != null and record.headUrl!= ''">
+                                    AND user.head_url LIKE CONCAT('%',#{record.headUrl},'%')
+                            </if>
+                                                                    <if test="record.createTime != null and record.createTime>0 ">
+                                    AND user.createTime LIKE CONCAT('%',#{record.createTime},'%')
+                            </if>
+        
+        <if test="startTime != null">
+            <![CDATA[AND user.start_time >= DATE(#{startTime})]]>
+        </if>
+        <if test="endTime != null">
+            <![CDATA[AND user.end_time <= DATE(#{endTime}]]>
+        </if>
+            <!--
+        <if test="search != null and search != ''">
+            OR user.name LIKE CONCAT('%',#{search},'%')
+        </if>
+        -->
+                                    </select>
+</mapper>
