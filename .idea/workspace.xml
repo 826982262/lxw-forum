@@ -5,52 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/util/ErrorView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/JsonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/PathUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/UUIDUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/Verification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/YmlUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/fileSystem/FileManage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util/fileSystem/localImpl/LocalFileManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_1_1_jre.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/UserEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/UserEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/topic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/topicManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/topicManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/gzhh/forum/util/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jfeat/forum/TestMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +198,7 @@
       <workItem from="1652322126565" duration="1943000" />
       <workItem from="1652324136279" duration="998000" />
       <workItem from="1652702028877" duration="13054000" />
-      <workItem from="1652797757976" duration="8321000" />
+      <workItem from="1652797757976" duration="9279000" />
     </task>
     <servers />
   </component>
