@@ -1,10 +1,4 @@
-forum:
-  #论坛外部目录，例如D:\bbs  不能以斜杆结尾。如果为空，则目录为jar文件的同级bbs目录
-  externalDirectory:
-  #选择缓存产品 ehcache
-  selectCache: ehcache
-  #是否允许显示图形界面安装系统
-  allowInstallSystem: false
+
 server:
   tomcat:
     uri-encoding: UTF-8

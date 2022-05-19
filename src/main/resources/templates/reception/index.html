@@ -38,7 +38,9 @@
             </ul>
         </div>
         <div class="head-search">
-            <form action="/" class="form-inline" method="get">
+
+            <form th:action="@{/index(tagId=${tagId})}" class="form-inline" method="post" >
+
                 <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="搜索"  aria-label="Search"style="margin-top: 3px" th:if="${keyword==null}">
                 <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="搜索" th:value="${keyword}" aria-label="Search"style="margin-top: 3px" th:if="${keyword!=null}">
 
@@ -175,6 +177,7 @@
                 <div id="tabNavigation" style="max-height: none;" >
             <th:block th:each="tag:${tags}">
                     <a th:href="@{~/index(tagId=${tag.id})}" th:class="${tag.id==tagId}?'tab_current':'tab'" th:text="${tag.lName}"></a>
+
             </th:block>
                 </div>
             </div>

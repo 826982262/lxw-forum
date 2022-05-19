@@ -7,19 +7,12 @@
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/TopicOverModelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Sensitivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Sensitivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/commentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/commentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/mytopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +206,7 @@
       <workItem from="1652702028877" duration="13054000" />
       <workItem from="1652797757976" duration="11663000" />
       <workItem from="1652876175015" duration="2469000" />
-      <workItem from="1652962443408" duration="859000" />
+      <workItem from="1652962443408" duration="4532000" />
     </task>
     <servers />
   </component>
@@ -237,7 +230,7 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java</url>
-          <line>65</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -295,30 +288,45 @@
           <line>70</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/ReplyServiceImpl.java</url>
           <line>34</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/ReplyController.java</url>
           <line>45</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
           <line>297</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/edu/gzhh/forum/util/TestMapper.java</url>
           <line>44</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java</url>
           <line>45</line>
           <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java</url>
@@ -326,12 +334,10 @@
           <properties class="com.jfeat.forum.services.gen.persistence.dao.TopicMapper" method="selectAllIndexTopicByLabelId" />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/UserMapper.java</url>
           <line>25</line>
-          <properties class="com.jfeat.forum.services.gen.persistence.dao.UserMapper" method="updateUserById">
-            <option name="EMULATED" value="true" />
-          </properties>
+          <properties class="com.jfeat.forum.services.gen.persistence.dao.UserMapper" method="updateUserById" />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>

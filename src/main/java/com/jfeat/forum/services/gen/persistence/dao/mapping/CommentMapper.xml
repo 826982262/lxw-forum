@@ -30,7 +30,7 @@
             left join
              user as b
              on a.uid = b.id
-        where a.topicId = #{topicId} and (audit != 3 or audit != 4)
+        where a.topicId = #{topicId} and audit != 3 and audit != 4
         order by a.postTime asc
             limit #{start},#{limit}
     </select>

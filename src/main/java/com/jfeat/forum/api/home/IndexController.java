@@ -8,6 +8,7 @@ import com.jfeat.forum.services.domain.service.LabelService;
 import com.jfeat.forum.services.domain.service.TopicOverModelService;
 import com.jfeat.forum.services.gen.persistence.model.Label;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,6 +38,7 @@ public class IndexController {
     public String indexPage(@RequestParam(value = "tagId",required=false)Integer tagId,
                             @RequestParam(value = "page",required=false)Integer page,
                             @RequestParam(value = "keyword",required=false)String keyword,
+                            ModelMap model,
                             HttpServletRequest request){
         if (ObjectUtil.isNull(tagId)) {
             tagId = 1;
@@ -57,12 +59,12 @@ public class IndexController {
         long total = topicLists.getTotal();
         /*总页数*/
         int totalPage = (int) Math.ceil(1.0*total/Constants.TOPIC_NUM);
-        request.setAttribute("topicLists",topicLists.getList());
-        request.setAttribute("tags",labelList);
-        request.setAttribute("tagId",tagId);
-        request.setAttribute("page",page);
-        request.setAttribute("totalPage",totalPage);
-        request.setAttribute("total",total);
+        model.addAttribute("topicLists",topicLists.getList());
+        model.addAttribute("tags",labelList);
+        model.addAttribute("tagId",tagId);
+        model.addAttribute("page",page);
+        model.addAttribute("totalPage",totalPage);
+        model.addAttribute("total",total);
         return "reception/index";
 
     }
