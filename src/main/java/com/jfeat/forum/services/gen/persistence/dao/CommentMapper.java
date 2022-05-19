@@ -1,5 +1,6 @@
 package com.jfeat.forum.services.gen.persistence.dao;
 
+import com.jfeat.forum.services.gen.crud.model.CommentModel;
 import com.jfeat.forum.services.gen.persistence.model.Comment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
@@ -19,4 +20,7 @@ public interface CommentMapper extends BaseMapper<Comment> {
     List<Comment> selectByTopicId(@Param("topicId")Long topicId, @Param("start")Integer start, @Param("limit")Integer limit);
 
     Integer updateAudit(@Param("commentIds")List<Long> commentIds, @Param("audit")Integer audit);
+    List<CommentModel> selectCommentByUid(@Param("uid")Long uid,
+                                          @Param("start") Integer start,
+                                          @Param("limit") Integer limit);
 }

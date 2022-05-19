@@ -17,10 +17,7 @@ import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.ImageUrl;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
-import com.jfeat.forum.services.domain.service.CommentOverModelService;
-import com.jfeat.forum.services.domain.service.LabelService;
-import com.jfeat.forum.services.domain.service.TopicOverModelService;
-import com.jfeat.forum.services.domain.service.UserService;
+import com.jfeat.forum.services.domain.service.*;
 import com.jfeat.forum.services.gen.crud.model.UserModel;
 import com.jfeat.forum.services.gen.persistence.dao.TopicMapper;
 import com.jfeat.forum.services.gen.persistence.model.Comment;
@@ -81,7 +78,8 @@ public class UserController {
     TopicOverModelService topicService;
     @Resource
     LabelService labelService;
-
+    @Resource
+    ReplyService replyService;
 
     @userLogin
     @ResponseBody
@@ -396,6 +394,49 @@ public class UserController {
         return new ResponseResult(CommonCode.SUCCESS);
     }
 
+    @userLogin
+    @GetMapping("/user/commentList")
+    public String mycomment(@RequestParam(value = "page",required=false)Integer page
+            , HttpServletRequest request
+            , ModelMap model){
+        if (page == null){
+            page=1;
+        }
 
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+
+        QueryResult result =  commentService.selectCommentByUserId(user.getId(),(page-1)* Constants.TOPIC_NUM, Constants.TOPIC_NUM);
+        long total = result.getTotal();
+        /*总页数*/
+        int totalPage = (int) Math.ceil(1.0*total/Constants.TOPIC_NUM);
+        model.addAttribute("commentLists",result.getList());
+        request.setAttribute("total",total);
+        request.setAttribute("totalPage",totalPage);
+        request.setAttribute("page",page);
+        model.addAttribute("path","mycomment");
+        return "reception/commentList";
+    }
+    @userLogin
+    @GetMapping("/user/replyList")
+    public String myreply(@RequestParam(value = "page",required=false)Integer page
+            , HttpServletRequest request
+            , ModelMap model){
+        if (page == null){
+            page=1;
+        }
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        QueryResult result =  replyService.selectReplyByUserId(user.getId(),(page-1)* Constants.TOPIC_NUM, Constants.TOPIC_NUM);
+        long total = result.getTotal();
+        /*总页数*/
+        int totalPage = (int) Math.ceil(1.0*total/Constants.TOPIC_NUM);
+        model.addAttribute("replyLists",result.getList());
+        request.setAttribute("total",total);
+        request.setAttribute("totalPage",totalPage);
+        request.setAttribute("page",page);
+        model.addAttribute("path","myreply");
+        return "reception/replyList";
+    }
 }
 

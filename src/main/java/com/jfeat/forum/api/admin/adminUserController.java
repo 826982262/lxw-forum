@@ -2,6 +2,7 @@ package com.jfeat.forum.api.admin;
 
 
 import com.jfeat.forum.common.exception.ExceptionCast;
+import com.jfeat.forum.interceptor.adminLogin;
 import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
@@ -28,12 +29,14 @@ public class adminUserController {
 
     @Resource
     UserService userService;
+    @adminLogin
     @RequestMapping("/usermanage")
     public String userManage(ModelMap modelMap){
         modelMap.addAttribute("path","usermanage");
 
         return "admin/userManage";
     }
+    @adminLogin
     @RequestMapping(value = "/users/list",method = RequestMethod.GET)
     @ResponseBody
     public QueryResult selectUserList(@RequestParam Map<String,Object> params){
@@ -44,7 +47,7 @@ public class adminUserController {
 
         return userService.selectUserList(pageUtil);
     }
-
+    @adminLogin
     @RequestMapping("/users/lock/{lockStatus}")
     @ResponseBody
     public ResponseResult lockUser(@PathVariable("lockStatus")Integer lockStatus, @RequestBody List<Long> Ids){
@@ -55,6 +58,7 @@ public class adminUserController {
 
         return userService.updateUsersFlag(Ids,lockStatus);
     }
+    @adminLogin
     @RequestMapping("profile")
     public String profile(ModelMap modelMap){
         modelMap.addAttribute("path","profile");

@@ -15,4 +15,6 @@ public interface CommentOverModelService extends CRUDCommentOverModelService{
     QueryResult selectCommentByTopicId(Long topicId, Integer start, Integer limit);
     List<Comment> selectCheckComment(Integer audit);
     Integer updateAuditResult(List<Long> commentIds,Integer audit);
+
+    QueryResult selectCommentByUserId(Long uid, Integer start, Integer limit);
 }

@@ -2,6 +2,7 @@ package com.jfeat.forum.api.admin;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.jfeat.forum.common.exception.ExceptionCast;
+import com.jfeat.forum.interceptor.adminLogin;
 import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
@@ -30,13 +31,14 @@ public class adminLabelController {
     @Resource
     LabelService labelService;
 
+    @adminLogin
     @RequestMapping("/labelmanage")
     public String labelManage(ModelMap modelMap){
         modelMap.addAttribute("path","labelmanage");
 
         return "admin/labelManage";
     }
-
+    @adminLogin
     @RequestMapping(value = "/label/list",method = RequestMethod.GET)
     @ResponseBody
     public QueryResult list(@RequestParam Map<String,Object> params){
@@ -47,6 +49,7 @@ public class adminLabelController {
 
         return labelService.getLabelOrder(pageUtil);
     }
+    @adminLogin
     @RequestMapping(value = "/label/save",method = RequestMethod.POST)
     @ResponseBody
     public ResponseResult saveLabel(@RequestBody Label label){
@@ -55,6 +58,7 @@ public class adminLabelController {
         if (ObjectUtil.hasEmpty(label.getlName(),label.getRanking())){ExceptionCast.cast(CommonCode.ISNOTNULL);}
         return labelService.saveLabel(label);
     }
+    @adminLogin
     @RequestMapping(value = "/label/update",method = RequestMethod.POST)
     @ResponseBody
     public ResponseResult updateLabel(@RequestBody Label label){
@@ -62,7 +66,7 @@ public class adminLabelController {
 
         return labelService.updateLabel(label);
     }
-
+    @adminLogin
     @ResponseBody
     @RequestMapping(value = "/label/delete" ,method = RequestMethod.POST)
     public ResponseResult deleteLabel(@RequestBody List<Long> ids){

@@ -85,7 +85,7 @@
     <select id="selectTopicListsByAudit" resultType="com.jfeat.forum.services.gen.persistence.model.Topic">
         select a.id,a.l_name,b.uname,a.title,a.time,a.audit,a.istop
         from topic as a
-        inner join
+        left join
         user as b
         on a.uid = b.id
         <if test="audit!=null">

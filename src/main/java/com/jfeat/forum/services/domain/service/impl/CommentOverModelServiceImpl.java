@@ -1,17 +1,21 @@
 package com.jfeat.forum.services.domain.service.impl;
+import cn.hutool.http.HtmlUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
 import com.jfeat.forum.services.domain.service.CommentOverModelService;
+import com.jfeat.forum.services.gen.crud.model.CommentModel;
 import com.jfeat.forum.services.gen.crud.service.impl.CRUDCommentOverModelServiceImpl;
 import com.jfeat.forum.services.gen.persistence.dao.CommentMapper;
 import com.jfeat.forum.services.gen.persistence.dao.ReplyMapper;
 import com.jfeat.forum.services.gen.persistence.model.Comment;
 import com.jfeat.forum.services.gen.persistence.model.Reply;
+import com.jfeat.forum.services.gen.persistence.model.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -25,9 +29,9 @@ import java.util.List;
 
 @Service("commentService")
 public class CommentOverModelServiceImpl extends CRUDCommentOverModelServiceImpl implements CommentOverModelService {
-    @Autowired
+    @Resource
     CommentMapper commentMapper;
-    @Autowired
+    @Resource
     ReplyMapper replyMapper;
     @Override
     protected String entityName() {
@@ -85,8 +89,23 @@ public class CommentOverModelServiceImpl extends CRUDCommentOverModelServiceImpl
             return commentMapper.updateAudit(commentIds,audit);
         }
 
-
-
+    @Override
+    public QueryResult selectCommentByUserId(Long uid, Integer start, Integer limit) {
+        QueryWrapper<Comment> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("uid",uid);
+        long total =  commentMapper.selectCount(queryWrapper);
+        List<CommentModel> commentLists = commentMapper.selectCommentByUid(uid,start,limit);
+        removeHtml(commentLists);
+        QueryResult<CommentModel> queryResult = new QueryResult<>();
+        queryResult.setList(commentLists);
+        queryResult.setTotal(total);
+        return queryResult;
+    }
+    public static void removeHtml(List<CommentModel> commentLists){
+        for (CommentModel comment: commentLists){
+            comment.setContent(HtmlUtil.cleanHtmlTag(comment.getContent()));
+        }
+    }
 }
 
 

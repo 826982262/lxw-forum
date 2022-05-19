@@ -46,25 +46,22 @@
 					</TR>
 				</THEAD>
 				<TBODY>
-		    		<#if pageView.records?exists && pageView.records?size gt 0 >    
-					<#list pageView.records as reply>
+				<th:block th:unless="${#lists.isEmpty(replyLists)}">
+					<th:block th:each="reply:${replyLists}">
 					<TR>
 						<TD class="dataTD">
-							<#if reply.status == 20 >
-								<a href="thread?topicId=${reply.topicId}&commentId=${reply.commentId}" target="_blank" class="link">${reply.content}</a>	
-							<#elseif reply.status == 10 >
-								${reply.content}
-							</#if>
+								<a href="/thread?topicId='+${reply.topicId}" target="_blank" class="link" th:text="${reply.content}"></a>
 						</TD>
 						<TD class="dataTD">
-							<a href="thread?topicId=${reply.topicId}" target="_blank" class="link">${reply.topicTitle}</a>		
+							<a th:href="'/thread?topicId='+${reply.topicId}" target="_blank" class="link" th:text="${reply.topicTitle}"></a>
 						</TD>
-						<TD class="dataTD">
-							${reply.postTime}
+						<TD class="dataTD" th:text="${reply.time}">
+
 						</TD>
 		    		</TR>
-		    		</#list>
-		    		</#if>
+					</th:block>
+				</th:block>
+
 
 			<th:block th:if="${#lists.isEmpty(replyLists)}">
 				<TR>
@@ -75,17 +72,17 @@
 			</TABLE>
 
 
-		<th:block th:unless="${#lists.isEmpty(topicLists)}">
+		<th:block th:unless="${#lists.isEmpty(replyLists)}">
 			<DIV class=pageList>
 				<nav aria-label="Page navigation example" th:fragment="Page">
 
 					<ul class="pagination justify-content-end">
 						<span class="" th:text="'共'+${total}+'条,当前'+${page}+'/'+${totalPage}+'页'" style="margin-right: 20px;margin-top: 7px "></span>
 						<li th:class="${page>1}?'page-item':'page-item disabled' ">
-							<a th:href="'/forum/user/mytopic?page='+${page-1}" class="page-link">上一页</a>
+							<a th:href="'/forum/user/replyList?page='+${page-1}" class="page-link">上一页</a>
 						</li>
 						<li th:class="${page<totalPage}?'page-item':'page-item disabled'">
-							<a class="page-link" th:href="'/forum/user/mytopic?page='+${page+1}">下一页</a>
+							<a class="page-link" th:href="'/forum/user/replyList?page='+${page+1}">下一页</a>
 						</li>
 					</ul>
 				</nav>

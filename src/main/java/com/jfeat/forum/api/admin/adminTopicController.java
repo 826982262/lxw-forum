@@ -2,6 +2,7 @@ package com.jfeat.forum.api.admin;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.jfeat.forum.common.exception.ExceptionCast;
+import com.jfeat.forum.interceptor.adminLogin;
 import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
@@ -28,12 +29,13 @@ public class adminTopicController {
 
     @Resource
     TopicOverModelService topicService;
-
+    @adminLogin
     @RequestMapping("")
     public String topicManage(ModelMap modelMap){
         modelMap.addAttribute("path","topicmanage");
         return "admin/topicManage";
     }
+    @adminLogin
     @ResponseBody
     @RequestMapping("/list")
     public QueryResult selectList(@RequestParam Map<String,Object> params
@@ -46,7 +48,7 @@ public class adminTopicController {
 //        return topicService.list();
         return topicService.selectTopicByAudit(pageUtil,audit);
     }
-
+    @adminLogin
     @ResponseBody
     @RequestMapping("/check/{audit}")
     public ResponseResult checkSensitivity(@PathVariable("audit")Integer audit, @RequestBody List<Long> Ids){
@@ -56,7 +58,7 @@ public class adminTopicController {
         }
         return topicService.UpdateAuditByIds(Ids, audit);
     }
-
+    @adminLogin
     @ResponseBody
     @RequestMapping("/doTop/{istop}")
     public ResponseResult doTop(@PathVariable("istop")Integer istop, @RequestBody List<Long> Ids){

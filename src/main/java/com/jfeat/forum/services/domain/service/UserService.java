@@ -28,4 +28,6 @@ public interface UserService extends CRUDUserService{
     ResponseResult updateUserHead(Long id, String url);
 
     ResponseResult updateUserById(Long id, String uname, String oldPassword, String password);
+
+    ResponseResult adminLogin(String userName, String password, HttpServletRequest request);
 }

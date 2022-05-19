@@ -2,6 +2,7 @@ package com.jfeat.forum.api.admin;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.jfeat.forum.common.exception.ExceptionCast;
+import com.jfeat.forum.interceptor.adminLogin;
 import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
@@ -30,20 +31,20 @@ public class adminSensitivityController {
     @Resource
     SensitivityService sensitivityService;
 
-
+    @adminLogin
     @RequestMapping("/updateword")
     public String updateWord(ModelMap modelMap){
         modelMap.addAttribute("path","updateword");
         return "admin/updateword";
     }
-
+    @adminLogin
     @RequestMapping("")
     public String sensitivity(ModelMap modelMap,@RequestParam(value = "audit",required = false)Integer audit){
         modelMap.addAttribute("path","sensitivity");
         return "admin/sensitivityManage";
     }
 
-
+    @adminLogin
     @ResponseBody
     @RequestMapping("/check/{audit}")
     public ResponseResult checkSensitivity(@PathVariable("audit")Integer audit, @RequestBody List<Long> Ids){
@@ -54,7 +55,7 @@ public class adminSensitivityController {
         return sensitivityService.UpdateAuditByIds(Ids, audit);
     }
 
-
+    @adminLogin
     @ResponseBody
     @RequestMapping("/list")
     public QueryResult selectList(@RequestParam Map<String,Object> params,

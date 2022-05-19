@@ -7,12 +7,45 @@
     <list default="true" id="b18f784b-094d-4e94-8092-fd31ba281118" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminLabelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminSensitivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminSensitivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminTopicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/admin/adminUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/CommentOverModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/CommentOverModelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/ReplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/CommentOverModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/CommentOverModelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/ReplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/ReplyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/CommentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/LabelModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/LabelModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/ReplyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/ReplyModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/SensitivityModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/SensitivityModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/TopicModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/crud/model/TopicModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/ReplyMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/ReplyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/mapping/TopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Sensitivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Sensitivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/newbee_mall_carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/newbee_mall_goods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/newbee_mall_goods_edit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/newbee_mall_index_config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/newbee_mall_order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminlogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/commentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/commentList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/replyList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/topicContent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jfeat/forum/util" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -79,11 +112,11 @@
       <recent name="com.jfeat.forum.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\林学文\Desktop\lxw-forum\src\main\resources\templates\admin" />
       <recent name="C:\Users\林学文\Desktop\lxw-forum\src\main\java\com\jfeat\forum\util" />
       <recent name="C:\Users\林学文\Desktop\forum\src\main\resources\static\upload" />
       <recent name="C:\Users\林学文\Desktop\forum\src\main\java\com\jfeat\forum\api\home" />
       <recent name="C:\Users\林学文\Desktop\forum\src" />
-      <recent name="C:\Users\林学文\Desktop\forum\src\main\java\com\jfeat\forum\api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jfeat.forum.util" />
@@ -92,6 +125,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AmApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="forum-main" />
       <extension name="coverage">
@@ -206,7 +250,7 @@
       <workItem from="1652702028877" duration="13054000" />
       <workItem from="1652797757976" duration="11663000" />
       <workItem from="1652876175015" duration="2469000" />
-      <workItem from="1652962443408" duration="4532000" />
+      <workItem from="1652962443408" duration="10179000" />
     </task>
     <servers />
   </component>
@@ -240,32 +284,32 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
-          <line>156</line>
+          <line>154</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
-          <line>176</line>
+          <line>174</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/CommentOverModelServiceImpl.java</url>
-          <line>51</line>
+          <line>55</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/CommentOverModelServiceImpl.java</url>
-          <line>60</line>
+          <line>64</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/CommentOverModelServiceImpl.java</url>
-          <line>54</line>
+          <line>58</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/CommentOverModelServiceImpl.java</url>
-          <line>49</line>
+          <line>53</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -290,7 +334,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/domain/service/impl/ReplyServiceImpl.java</url>
-          <line>34</line>
+          <line>38</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -300,7 +344,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/UserController.java</url>
-          <line>297</line>
+          <line>295</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -310,7 +354,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/model/Topic.java</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -327,6 +371,31 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/api/home/IndexController.java</url>
           <line>61</line>
           <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/interceptor/adminLoginInterceptor.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/jfeat/forum/services/gen/persistence/dao/TopicMapper.java</url>

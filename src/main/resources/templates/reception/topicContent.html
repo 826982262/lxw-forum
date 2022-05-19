@@ -103,7 +103,7 @@
                                     <a class="userName" th:href="@{user/control/home(userName=${comment.uname})}" th:text="${comment.uname}"></a>
 
 <!--                                <#if comment.isStaff>-->
-                                <span class="staff">官方人员</span>
+<!--                                <span class="staff" th:if="">官方人员</span>-->
 <!--                            </#if>-->
 
                             <span class="master" th:if="${comment.uid == topic.uid}">作者</span>
@@ -135,7 +135,7 @@
                 <a class="userName" th:href="@{user/control/home(uname=${reply.uname})}" th:text="${reply.uname}"></a>
 <!--
         <#if reply.isStaff>-->
-        <span class="staff">官方人员</span>
+<!--        <span class="staff">官方人员</span>-->
 <!--    </#if>-->
 
     <span class="master" th:if="${topic.uid==reply.uid}">作者</span>
@@ -403,9 +403,9 @@
                 <a href="user/control/home?userName=${topic.userName}" target="_blank" id="" th:text="${topic.uname}">
                 </a>
             </p>
-                    <div class="role">
-                        <i class="staff">官方人员</i>
-                    </div>
+<!--                    <div class="role">-->
+<!--                        <i class="staff">官方人员</i>-->
+<!--                    </div>-->
 
 <ul>
     <li>

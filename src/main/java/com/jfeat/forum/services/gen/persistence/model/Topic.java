@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 /**
@@ -22,6 +23,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * @since 2022-05-10
  */
 @Data
+@ToString
 @ApiModel(value="Topic对象", description="")
 public class Topic extends Model<Topic> {
 

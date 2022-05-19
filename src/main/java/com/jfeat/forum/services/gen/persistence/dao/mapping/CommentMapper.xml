@@ -34,11 +34,22 @@
         order by a.postTime asc
             limit #{start},#{limit}
     </select>
+    <select id="selectCommentByUid" resultType="com.jfeat.forum.services.gen.crud.model.CommentModel">
+        select t1.*,t2.title as topicTitle
+        from comment t1
+        left join topic as t2
+        on t1.topicId=t2.id
+        where t1.uid=#{uid}
+        order by t1.postTime asc
+            limit #{start},#{limit}
+    </select>
+
     <update id="updateAudit" parameterType="java.util.List">
         <foreach collection="commentIds" index="index" item="item" open="" close="" separator=";">
             update comment
             set audit=#{audit}
             where id=${item}
+
         </foreach>
     </update>
 

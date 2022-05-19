@@ -7,12 +7,14 @@ package com.jfeat.forum.services.gen.crud.model;
 import java.util.List;
 import com.jfeat.forum.services.gen.persistence.model.Comment;
 import com.jfeat.forum.services.gen.persistence.model.Topic;
+import lombok.Data;
 
 /**
  * Created by Code generator on 2022-05-10
  *  * slaves.size() : 1
  *  * modelpack : import com.jfeat.module.topic.services.gen.crud.model.TopicModel;
  */
+@Data
 public class TopicModel extends Topic{
 
     // comment

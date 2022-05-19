@@ -1,5 +1,6 @@
 package com.jfeat.forum.interceptor;
 
+import cn.hutool.core.codec.Base32;
 import com.jfeat.forum.common.exception.ExceptionCast;
 import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.services.gen.persistence.model.User;
@@ -34,8 +35,14 @@ public class adminLoginInterceptor implements HandlerInterceptor {
             User user = (User) request.getSession().getAttribute("user");
             if (user!=null&&user.getFlag()==1){
             return true;
+            }else if (user!=null&&user.getFlag()!=1){
+                response.sendRedirect("/index");
+//                request.getRequestDispatcher("/login").forward(request,response);
+                return false;
+
             }else {
-                ExceptionCast.cast(CommonCode.UNAUTHORISE);
+                response.sendRedirect("/index");
+                return false;
             }
         }
         return true;

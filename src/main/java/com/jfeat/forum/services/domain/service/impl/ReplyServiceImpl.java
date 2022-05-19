@@ -1,10 +1,14 @@
 package com.jfeat.forum.services.domain.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jfeat.forum.model.CommonCode;
+import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
 import com.jfeat.forum.services.domain.service.ReplyService;
+import com.jfeat.forum.services.gen.crud.model.CommentModel;
+import com.jfeat.forum.services.gen.crud.model.ReplyModel;
 import com.jfeat.forum.services.gen.crud.service.impl.CRUDReplyServiceImpl;
 import com.jfeat.forum.services.gen.persistence.dao.ReplyMapper;
+import com.jfeat.forum.services.gen.persistence.model.Comment;
 import com.jfeat.forum.services.gen.persistence.model.Reply;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,4 +56,15 @@ public class ReplyServiceImpl extends CRUDReplyServiceImpl implements ReplyServi
         return replyMapper.updateAudit(replyIds,audit);
     }
 
-                            }
+    @Override
+    public QueryResult selectReplyByUserId(Long uid, Integer start, Integer limit) {
+        QueryWrapper<Reply> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("uid",uid);
+        long total =  replyMapper.selectCount(queryWrapper);
+        List<ReplyModel> replyLists = replyMapper.selectReplyByUid(uid,start,limit);
+        QueryResult<ReplyModel> queryResult = new QueryResult<>();
+        queryResult.setList(replyLists);
+        queryResult.setTotal(total);
+        return queryResult;
+    }
+}

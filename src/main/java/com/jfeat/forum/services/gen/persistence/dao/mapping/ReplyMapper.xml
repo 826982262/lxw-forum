@@ -35,6 +35,16 @@
         order by a.time asc
 
     </select>
+    <select id="selectReplyByUid" resultType="com.jfeat.forum.services.gen.crud.model.ReplyModel">
+        select t1.*,t2.title as topicTitle
+        from reply t1
+                 left join topic as t2
+                           on t1.topicId=t2.id
+        where t1.uid=#{uid}
+        order by t1.time asc
+            limit #{start},#{limit}
+
+    </select>
 
     <update id="updateAudit" parameterType="java.util.List">
         <foreach collection="replyIds" index="index" item="item" open="" close="" separator=";">

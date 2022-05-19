@@ -167,4 +167,27 @@ public class UserServiceImpl extends CRUDUserServiceImpl implements UserService 
         Integer flag = userMapper.updateUserById(id,uname,DigestUtil.md5Hex(password));
         if (flag>0){ return   new ResponseResult(CommonCode.SUCCESS); }else {return new ResponseResult(CommonCode.FAIL);}
     }
+    @Override
+    public ResponseResult adminLogin(String userName, String password, HttpServletRequest request) {
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        /*登录类型为用户名*/
+        /* 登录类型为手机号*/
+        queryWrapper.eq("account",userName);
+        queryWrapper.eq("flag",1);
+        User user =  userMapper.selectOne(queryWrapper);
+        /*判断账号存在*/
+        if (ObjectUtil.isNull(user)){
+            ExceptionCast.cast(CommonCode.LOGINERROR);
+        }
+        /*密码MD5加密后对比*/
+        password = DigestUtil.md5Hex(password);
+        /*密码不一致直接报异常中断*/
+        if (!user.getPassword().equals(password))
+        {  ExceptionCast.cast(CommonCode.LOGINERROR); }
+        /*验证成功，保存用户信息*/
+        HttpSession session = request.getSession();
+        session.setAttribute("user",user);
+        /*返回登录成功*/
+        return new ResponseResult(CommonCode.LOGSUCCESS);
+    }
 }

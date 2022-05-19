@@ -8,6 +8,9 @@
 	<script language="javascript" th:src="@{/js/tool.js}" type="text/javascript"></script>
 	<script language="javascript" th:src="@{/js/ajax.js}" type="text/javascript"></script>
 	<script language="javascript" src="/js/json2.js" type="text/javascript"></script>
+	<script type="text/javascript" th:src="@{/js/jquery/jquery.min.js}" language="javascript"></script>
+	<link rel="stylesheet" th:href="@{/plugins/bootstrap/css/bootstrap.min.css}">
+	<script type="text/javascript" th:src="@{/plugins/bootstrap/js/bootstrap.js}" language="javascript"></script>
 </head>
 <script type="text/javascript" language="javascript"> 
 	
@@ -37,31 +40,27 @@
 					</TR>
 				</THEAD>
 				<TBODY>
-		    		<#if pageView.records?exists && pageView.records?size gt 0 >    
-					<#list pageView.records as comment>
+				<th:block th:unless="${#lists.isEmpty(commentLists)}">
+					<th:block th:each="comment:${commentLists}">
+
 					<TR>
 						<TD class="dataTD">
-							<#if comment.status == 20 >
-								<a href="thread?topicId=${comment.topicId}&commentId=${comment.id}" target="_blank" class="link">${comment.content}</a>	
-							<#elseif comment.status == 10 >
-								${comment.content}
-							</#if> 
+								<a href="thread?topicId=${comment.topicId}&commentId=${comment.id}" target="_blank" class="link" th:text="${comment.content}"></a>
 						</TD>
 						<TD class="dataTD">
-							<a href="thread?topicId=${comment.topicId}" target="_blank" class="link">${comment.topicTitle}</a>
+							<a th:href="'thread?topicId='+${comment.topicId}" target="_blank" class="link" th:text="${comment.topicTitle}"></a>
 									
 						</TD>
-						<TD class="dataTD">
-							${comment.postTime}
+						<TD class="dataTD" th:text="${comment.postTime}">
+
 						</TD>
 		    		</TR>
-		    		</#list>
-		    		</#if> 
-		    		<#if !pageView.records?exists || pageView.totalrecord == 0 > 
-		    			<TR>
+						<th:block th:if="${#lists.isEmpty(commentLists)}">
+
+						<TR>
 							<TD colSpan="3"  class="empty">还没有评论记录</TD>
 		    			</TR>
-		    		</#if> 
+						</th:block>
 		    	</TBODY>
 			</TABLE>
 
@@ -72,10 +71,10 @@
 					<ul class="pagination justify-content-end">
 						<span class="" th:text="'共'+${total}+'条,当前'+${page}+'/'+${totalPage}+'页'" style="margin-right: 20px;margin-top: 7px "></span>
 						<li th:class="${page>1}?'page-item':'page-item disabled' ">
-							<a th:href="'/forum/user/mytopic?page='+${page-1}" class="page-link">上一页</a>
+							<a th:href="'/forum/user/commentList?page='+${page-1}" class="page-link">上一页</a>
 						</li>
 						<li th:class="${page<totalPage}?'page-item':'page-item disabled'">
-							<a class="page-link" th:href="'/forum/user/mytopic?page='+${page+1}">下一页</a>
+							<a class="page-link" th:href="'/forum/user/commentList?page='+${page+1}">下一页</a>
 						</li>
 					</ul>
 				</nav>

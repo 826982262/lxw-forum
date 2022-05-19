@@ -5,11 +5,14 @@ package com.jfeat.forum.services.gen.crud.model;
 
 
 import com.jfeat.forum.services.gen.persistence.model.Reply;
+import lombok.Data;
 
 /**
  * Created by Code generator on 2022-05-10
  *  * slaves.size() : 0
  *  * modelpack : $modelpack
  */
+@Data
 public class ReplyModel extends Reply{
+    private String topicTitle;
 }
