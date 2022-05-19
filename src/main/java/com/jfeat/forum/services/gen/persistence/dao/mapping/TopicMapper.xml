@@ -36,7 +36,7 @@
         left join
         user as b
         on a.uid=b.id
-        where   a.audit!=3 or a.audit!=4
+        where   (a.audit!=3 or a.audit!=4)
 
         <if test="tagId!=null and tagId!=1">
             and

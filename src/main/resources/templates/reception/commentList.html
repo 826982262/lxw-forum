@@ -1,30 +1,31 @@
-<#-- 默认我的评论 -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<base href="${baseURL}">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>我的评论 - ${title}</title>
-	<meta name="keywords" content="${keywords}"/>
-	<meta name="description" content="${description}"/>
-	<link href="${commonPath}css/common.css" type="text/css" rel="stylesheet" charset="utf-8">
-	<link href="${commonPath}css/themify-icons/style.css" type="text/css" rel="stylesheet">
-	<script language="javascript" src="${commonPath}js/tool.js" type="text/javascript"></script>
-	<script language="javascript" src="${commonPath}js/ajax.js" type="text/javascript"></script>
-	<script language="javascript" src="${commonPath}js/json2.js" type="text/javascript"></script>
+	<title>我的评论</title>
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css"/>
+	<link href="/css/themify-icons/style.css" type="text/css" rel="stylesheet">
+	<script language="javascript" th:src="@{/js/tool.js}" type="text/javascript"></script>
+	<script language="javascript" th:src="@{/js/ajax.js}" type="text/javascript"></script>
+	<script language="javascript" src="/js/json2.js" type="text/javascript"></script>
 </head>
 <script type="text/javascript" language="javascript"> 
 	
 	
 </script>
 <body>
-<#-- 引入页头 -->
-<@include action="${newPublic_2}"/>
+<div th:replace="reception/index ::index-head"></div>
 <div class="skeleton">
 	<div class="main wrap backgroundModule" >
-
-		<#-- 引入服务导航 -->
-		<@include action="${newPublic_4}"/>
+		<!--		 引入服务导航-->
+		<div>
+			<ul class="serviceNav">
+				<li th:class="${path}=='mytopic'?'title selected':'title'"><a href="/forum/user/mytopic">我的话题</a></li>
+				<li th:class="${path}=='mycomment'?'title selected':'title'"><a href="/forum/user/commentList">我的评论</a></li>
+				<li th:class="${path}=='myreply'?'title selected':'title'"><a href="/forum/user/replyList">我的回复</a></li>
+				<li th:class="${path}=='editUser'?'title selected':'title'"><a href="/forum/user/editUser">修改个人资料</a></li>
+			</ul>
+		</div>
 	
 		<div class="dataTable">
 			<TABLE class="dataList" width="100%">
@@ -63,16 +64,31 @@
 		    		</#if> 
 		    	</TBODY>
 			</TABLE>
+
+		<th:block th:unless="${#lists.isEmpty(commentLists)}">
 			<DIV class=pageList>
-				<@include action="${newPublic_1}"/>
+				<nav aria-label="Page navigation example" th:fragment="Page">
+
+					<ul class="pagination justify-content-end">
+						<span class="" th:text="'共'+${total}+'条,当前'+${page}+'/'+${totalPage}+'页'" style="margin-right: 20px;margin-top: 7px "></span>
+						<li th:class="${page>1}?'page-item':'page-item disabled' ">
+							<a th:href="'/forum/user/mytopic?page='+${page-1}" class="page-link">上一页</a>
+						</li>
+						<li th:class="${page<totalPage}?'page-item':'page-item disabled'">
+							<a class="page-link" th:href="'/forum/user/mytopic?page='+${page+1}">下一页</a>
+						</li>
+					</ul>
+				</nav>
 			</DIV>
+		</th:block>
+
 		</div>
 
 	</div>
 
 </div>
-<#--引入页脚-->
-<@include action="${newPublic_3}"/>
+<div th:replace="reception/index :: foot"></div>
+
 </body>
 
 </html>

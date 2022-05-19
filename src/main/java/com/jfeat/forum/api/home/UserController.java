@@ -324,7 +324,7 @@ public class UserController {
         User use = (User) session.getAttribute("user");
         User user = userService.selectUserById(use.getId());
         model.addAttribute("user",user);
-        model.addAttribute("path"," editUser");
+        model.addAttribute("path","editUser");
 
     return "reception/editUser";
 

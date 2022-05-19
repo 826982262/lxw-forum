@@ -42,7 +42,14 @@
     </update>
     <update id="updateUserById">
         update user
-        set uname = #{uname},password=#{password}
+        set
+            <if test="uname!=null">
+                uname = #{uname},
+    </if>
+        <if test="password!=null">
+            password=#{password}
+        </if>
+
         where id = #{id}
     </update>
 </mapper>

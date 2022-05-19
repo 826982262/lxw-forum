@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -49,7 +50,7 @@ public class Reply extends Model<Reply> {
     private Long topicId;
 
 
-        @JsonFormat(timezone = "GMT+8" , pattern = "yyyy:MM:dd HH:mm:ss")
+      @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "回复时间 ")
       private Date time;
 

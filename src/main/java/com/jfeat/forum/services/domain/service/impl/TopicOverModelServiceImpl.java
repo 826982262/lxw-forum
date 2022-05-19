@@ -69,7 +69,7 @@ public class TopicOverModelServiceImpl extends CRUDTopicOverModelServiceImpl imp
         List<TopicPo> topicLists = topicMapper.selectAllIndexTopicByLabelId(tagId,start,limit,keyword);
         QueryResult<TopicPo> queryResult = new QueryResult<>();
         queryResult.setList(topicLists);
-        queryResult.setTotal(total+1);
+        queryResult.setTotal(total);
         return queryResult;
     }
 

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -58,7 +59,7 @@ public class Comment extends Model<Comment> {
 
       @ApiModelProperty(value = "评论内容 ")
       private String content;
-    @JsonFormat(timezone = "GMT+8" , pattern = "yyyy:MM:dd HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "评论时间")
       @TableField("postTime")
     private Date postTime;
