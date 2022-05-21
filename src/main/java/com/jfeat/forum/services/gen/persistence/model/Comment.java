@@ -61,6 +61,7 @@ public class Comment extends Model<Comment> {
 
       @ApiModelProperty(value = "评论内容 ")
       private String content;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "评论时间")
       @TableField("postTime")

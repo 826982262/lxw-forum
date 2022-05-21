@@ -21,6 +21,6 @@ public interface TopicOverModelService extends CRUDTopicOverModelService{
     QueryResult selectTopicByAudit(PageQueryUtil pageQueryUtil, Integer audit);
     ResponseResult UpdateIsTopByIds(List<Long> Ids,Integer istop);
     ResponseResult updateTopic(Topic topic);
-
+    Topic selectNoTopicByTopicId(Long topicId);
     QueryResult selectTopicByUserId(Long uid,Integer start, Integer limit);
 }

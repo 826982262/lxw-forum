@@ -45,7 +45,7 @@ public class Sensitivity extends Model<Sensitivity> {
 
       @ApiModelProperty(value = "审核的内容")
       private String content;
-
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "创建时间")
       @TableField("createTime")

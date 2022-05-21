@@ -51,7 +51,7 @@ public class Reply extends Model<Reply> {
       @TableField("topicId")
     private Long topicId;
 
-
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
       @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "回复时间 ")
       private Date time;

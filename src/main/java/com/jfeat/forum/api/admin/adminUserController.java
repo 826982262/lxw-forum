@@ -51,7 +51,7 @@ public class adminUserController {
     @RequestMapping("/users/lock/{lockStatus}")
     @ResponseBody
     public ResponseResult lockUser(@PathVariable("lockStatus")Integer lockStatus, @RequestBody List<Long> Ids){
-        if (Ids.size()<1&&!(lockStatus.equals(2)||lockStatus.equals(3))){
+        if (Ids.size()<1&&(lockStatus.equals(2)||lockStatus.equals(3))){
             ExceptionCast.cast(CommonCode.INVALID_PARAM);
         }
 

@@ -50,7 +50,7 @@
 					<th:block th:each="reply:${replyLists}">
 					<TR>
 						<TD class="dataTD">
-								<a href="/thread?topicId='+${reply.topicId}" target="_blank" class="link" th:text="${reply.content}"></a>
+								<a th:href="'/thread?topicId='+${reply.topicId}" target="_blank" class="link" th:text="${reply.content}"></a>
 						</TD>
 						<TD class="dataTD">
 							<a th:href="'/thread?topicId='+${reply.topicId}" target="_blank" class="link" th:text="${reply.topicTitle}"></a>

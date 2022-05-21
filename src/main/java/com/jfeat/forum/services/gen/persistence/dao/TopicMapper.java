@@ -23,6 +23,7 @@ public interface TopicMapper extends BaseMapper<Topic> {
                                                @Param("keyword") String keyword
     );
     Topic selectTopicByTopicId(@Param("topicId")Long topicId);
+    Topic selectNoTopicByTopicId(@Param("topicId")Long topicId);
     List<Topic> selectCheckTopic(@Param("check") boolean chack);
 
     Integer updateAudit(@Param("topicIds") List<Long> topicIds,@Param("audit") Integer audit);

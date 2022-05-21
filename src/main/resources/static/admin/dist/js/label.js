@@ -4,7 +4,7 @@ $(function () {
         url: '/admin/label/list',
         datatype: "json",
         colModel: [
-            {label: 'id', name: 'lId',  width: 50,  hidden: true,},
+            {label: 'id', name: 'id',  width: 50,  hidden: true,},
             {label: '分类名称', name: 'lName',  width: 240, align: "center"},
             {label: '排序值', name: 'ranking',  width: 120, align: "center"}
         ],

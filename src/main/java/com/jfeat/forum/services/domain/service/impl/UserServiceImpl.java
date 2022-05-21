@@ -8,6 +8,7 @@ import com.jfeat.forum.model.CommonCode;
 import com.jfeat.forum.model.QueryResult;
 import com.jfeat.forum.model.ResponseResult;
 import com.jfeat.forum.services.domain.service.UserService;
+import com.jfeat.forum.services.gen.crud.service.CRUDUserService;
 import com.jfeat.forum.services.gen.crud.service.impl.CRUDUserServiceImpl;
 import com.jfeat.forum.services.gen.persistence.dao.UserMapper;
 import com.jfeat.forum.services.gen.persistence.model.User;
@@ -132,7 +133,8 @@ public class UserServiceImpl extends CRUDUserServiceImpl implements UserService 
         }
 
         Integer sign = userMapper.updateUsersFlagByUids(Ids,flag);
-        if (sign== Ids.size()){
+
+        if (sign>0){
             return   new ResponseResult(CommonCode.SUCCESS);
         }else {
             return new ResponseResult(CommonCode.FAIL);

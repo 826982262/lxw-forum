@@ -48,6 +48,7 @@ public class User extends Model<User> {
       @ApiModelProperty(value = "头像地址")
       private String headUrl;
     @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
       @ApiModelProperty(value = "创建时间")
       @TableField("createTime")
     private Date createTime;

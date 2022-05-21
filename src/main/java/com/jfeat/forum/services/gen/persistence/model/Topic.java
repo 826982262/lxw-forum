@@ -40,9 +40,10 @@ public class Topic extends Model<Topic> {
     private Long uid;
 
     private String title;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
     private Date time;
-
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern = "yyyy:MM:dd HH:mm:ss")
       @ApiModelProperty(value = "更新时间")
       @TableField("updateTime")

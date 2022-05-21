@@ -67,7 +67,7 @@
 								<a class="operation-button" th:onclick="'deploytopic('+${topic.id}+')'" th:if="${topic.audit==4}" >
 									<span>发布</span>
 								</a>
-								<a class="operation-button" th:href="'/forum/user/editTopic?topicId='+${topic.id}" target="_blank" >
+								<a class="operation-button" th:href="'/forum/user/editTopicEntity?topicId='+${topic.id}" target="_blank" >
 									<span>编辑</span>
 								</a>
 							</div>

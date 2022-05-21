@@ -99,6 +99,15 @@ public class TopicOverModelServiceImpl extends CRUDTopicOverModelServiceImpl imp
         }
         return topic;
     }
+    @Override
+    public Topic selectNoTopicByTopicId(Long topicId) {
+        Topic topic = topicMapper.selectNoTopicByTopicId(topicId);
+
+        if (ObjectUtil.isNull(topic)){
+            ExceptionCast.cast(CommonCode.SERVER_ERROR);
+        }
+        return topic;
+    }
 
     @Override
     public List<Topic> selectNotCheckTopic(Integer audit) {
@@ -131,7 +140,7 @@ public class TopicOverModelServiceImpl extends CRUDTopicOverModelServiceImpl imp
         result.setList(topicList);
         result.setCurrPage(pageQueryUtil.getPage());
         result.setPageSize(pageQueryUtil.getLimit());
-
+        result.setTotalPage(total,pageQueryUtil.getLimit());
         return result;
     }
 

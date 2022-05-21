@@ -22,10 +22,11 @@ $(function () {
         styleUI: 'Bootstrap',
         loadtext: '信息读取中...',
         rownumbers: false,
+        pgbuttons: true,
         rownumWidth: 20,
-        loadonce: true,//进行分页跳转
         autowidth: true,
         multiselect: true,
+        viewrecords: true,
         pager: "#jqGridPager",
         jsonReader: {
             root: "list",
@@ -44,9 +45,9 @@ $(function () {
             $("#jqGrid").closest(".ui-jqgrid-bdiv").css({"overflow-x": "hidden"});
         },
 
-        onSelectRow: function(uid){
+        onSelectRow: function(id){
 
-            rowData = $("#jqGrid").jqGrid("getRowData", uid);
+            rowData = $("#jqGrid").jqGrid("getRowData", id);
             var admin = "<button type=\"button\" class=\"btn btn-block btn-success btn-sm \" style=\"width: 70%;;margin:0 auto\">管理员</button>";
 
             if (rowData.flag!=null&&rowData.flag==admin){
@@ -55,16 +56,16 @@ $(function () {
             }
         },
         /*多选时触发*/
-        onSelectAll:function(uid,status) {
+        onSelectAll:function(id,status) {
 
             if (status == true) {
-                var uid = $("#jqGrid").jqGrid('getDataIDs');//获取所有行id
+                var id = $("#jqGrid").jqGrid('getDataIDs');//获取所有行id
                 var admin = "<button type=\"button\" class=\"btn btn-block btn-success btn-sm \" style=\"width: 70%;;margin:0 auto\">管理员</button>";
                 for (var i = 0; i < uid.length; i++) {
-                    rowData = $("#jqGrid").jqGrid("getRowData", uid[i]);
+                    rowData = $("#jqGrid").jqGrid("getRowData", id[i]);
 
                     if (rowData.flag != null && rowData.flag ==admin) {
-                        $("#jqGrid").jqGrid("setSelection", uid[i], false);//设置该行不能被选中。
+                        $("#jqGrid").jqGrid("setSelection", id[i], false);//设置该行不能被选中。
                     }
                 }
             }
@@ -98,6 +99,8 @@ $(function () {
             return "<button type=\"button\" class=\"btn btn-block btn-success btn-sm \" style=\"width: 50%;;margin:0 auto\">已发布</button>";
         }else if (cellvalue ==3){
             return "<button type=\"button\" class=\"btn btn-block btn-danger btn-sm \" style=\"width: 75%;;margin:0 auto\">审核不通过</button>";
+        }else if (cellvalue ==4){
+            return "<button type=\"button\" class=\"btn btn-block btn-info btn-sm \" style=\"width: 75%;;margin:0 auto\">用户隐藏</button>";
         }
     }
 
@@ -118,14 +121,14 @@ $(function () {
     //     }
     // }
 
-    // /*解决bootstrap4的jqGrid下一页不显示*/
-    // $("#first_jqGridPager").html("<span class=\"oi oi-media-step-backward\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i></span>")
-    //
-    // $("#prev_jqGridPager").html("<span class=\"oi oi-caret-left\"><i class=\"fa fa-backward\" aria-hidden=\"true\"></i></span>")
-    //
-    // $("#next_jqGridPager").html("<span class=\"oi oi-caret-right\"><i class=\"fa fa-forward\" aria-hidden=\"true\"></i></span>")
-    //
-    // $("#last_jqGridPager").html("<span class=\"oi oi-media-step-forward\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i></span>")
+    /*解决bootstrap4的jqGrid下一页不显示*/
+    $("#first_jqGridPager").html("<span class=\"oi oi-media-step-backward\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i></span>")
+
+    $("#prev_jqGridPager").html("<span class=\"oi oi-caret-left\"><i class=\"fa fa-backward\" aria-hidden=\"true\"></i></span>")
+
+    $("#next_jqGridPager").html("<span class=\"oi oi-caret-right\"><i class=\"fa fa-forward\" aria-hidden=\"true\"></i></span>")
+
+    $("#last_jqGridPager").html("<span class=\"oi oi-media-step-forward\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i></span>")
 });
 
 /**
@@ -187,7 +190,8 @@ function doTop(isTop) {
                             swal("操作成功", {
                                 icon: "success",
                             });
-                            $("#jqGrid").trigger("reloadGrid");
+                            reload();
+
                         } else {
                             swal(res.message, {
                                 icon: "error",
@@ -228,6 +232,7 @@ function lockTopic(lockStatus) {
                             swal("操作成功", {
                                 icon: "success",
                             });
+                            reload();
                             $("#jqGrid").trigger("reloadGrid");
                         } else {
                             swal(res.message, {

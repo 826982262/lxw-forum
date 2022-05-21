@@ -178,7 +178,7 @@ function lockTopic(lockStatus) {
                             swal("操作成功", {
                                 icon: "success",
                             });
-                            $("#jqGrid").trigger("reloadGrid");
+                            reload();
                         } else {
                             swal(res.message, {
                                 icon: "error",

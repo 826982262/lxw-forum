@@ -197,7 +197,7 @@ public class UserController {
         return "reception/home";
     }
 
-
+    @userLogin
     @RequestMapping("/user/editTopic")
     public String editTopic(HttpServletRequest request,@RequestParam("topicId")Long topicId){
 
@@ -437,6 +437,29 @@ public class UserController {
         request.setAttribute("page",page);
         model.addAttribute("path","myreply");
         return "reception/replyList";
+    }
+
+    @userLogin
+    @RequestMapping("/user/editTopicEntity")
+    public String editTopicEntity(HttpServletRequest request,@RequestParam("topicId")Long topicId) {
+
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        if (ObjectUtil.isNull(user)) {
+            ExceptionCast.cast(CommonCode.UNAUTHENTICATED);
+        }
+        if (ObjectUtil.isNull(topicId)) {
+            ExceptionCast.cast(CommonCode.ISNOTNULL);
+        }
+        Topic topic = topicService.selectNoTopicByTopicId(topicId);
+        if (!topic.getUid().equals(topic.getUid())) {
+            ExceptionCast.cast(CommonCode.UNAUTHORISE);
+        }
+        List<Label> labelList = labelService.getAllLabel();
+        request.setAttribute("topic", topic);
+        request.setAttribute("tags", labelList);
+
+        return "reception/editTopic";
     }
 }
 

@@ -45,10 +45,10 @@
 
 					<TR>
 						<TD class="dataTD">
-								<a href="thread?topicId=${comment.topicId}&commentId=${comment.id}" target="_blank" class="link" th:text="${comment.content}"></a>
+								<a th:href="'/thread?topicId='+${comment.topicId}" target="_blank" class="link" th:text="${comment.content}"></a>
 						</TD>
 						<TD class="dataTD">
-							<a th:href="'thread?topicId='+${comment.topicId}" target="_blank" class="link" th:text="${comment.topicTitle}"></a>
+							<a th:href="'/thread?topicId='+${comment.topicId}" target="_blank" class="link" th:text="${comment.topicTitle}"></a>
 									
 						</TD>
 						<TD class="dataTD" th:text="${comment.postTime}">

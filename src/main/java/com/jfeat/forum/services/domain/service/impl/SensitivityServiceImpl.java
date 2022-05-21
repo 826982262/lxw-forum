@@ -53,6 +53,7 @@ public class SensitivityServiceImpl extends CRUDSensitivityServiceImpl implement
         result.setList(sensitivities);
         result.setCurrPage(pageQueryUtil.getPage());
         result.setPageSize(pageQueryUtil.getLimit());
+        result.setTotalPage(total,pageQueryUtil.getLimit());
         return result;
     }
 

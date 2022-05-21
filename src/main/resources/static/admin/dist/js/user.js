@@ -3,7 +3,7 @@ $(function () {
         url: '/admin/users/list',
         datatype: "json",
         colModel: [
-            {label: 'id', name: 'uid', index: 'uid', width: 50, key: true, hidden: true},
+            {label: 'id', name: 'id', index: 'id', width: 50, key: true, hidden: true},
             {label: '账号', name: 'account', index: 'account',align: "center", width: 180},
             {label: '昵称', name: 'uname', index: 'uname', align: "center",width: 180},
             {label: '身份状态', name: 'flag', index: 'flag',align: "center", width: 60, formatter: lockedFormatter},
@@ -146,7 +146,8 @@ function lockUser(lockStatus) {
                             swal("操作成功", {
                                 icon: "success",
                             });
-                            $("#jqGrid").trigger("reloadGrid");
+
+                            reload();
                         } else {
                             swal(res.message, {
                                 icon: "error",

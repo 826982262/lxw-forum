@@ -15,6 +15,7 @@ $(function () {
                     $("#updateUserNameButton").attr("disabled",false);
                     console.log(r);
                     if (r == 'success') {
+                        reload();
                         alert('修改成功');
                     } else {
                         alert('修改失败');

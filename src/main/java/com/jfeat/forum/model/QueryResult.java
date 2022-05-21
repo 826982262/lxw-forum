@@ -36,4 +36,9 @@ public class QueryResult<T> {
 
     public QueryResult() {
     }
+
+
+    public void setTotalPage(long total,int pageSize) {
+        this.totalPage = (int) Math.ceil(1.0* total/pageSize);
+    }
 }
