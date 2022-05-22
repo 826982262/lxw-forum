@@ -12,6 +12,11 @@
       <option name="url" value="http://119.29.79.150:8081/repository/aliyun-maven/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="lumaserv" />
+      <option name="name" value="lumaserv" />
+      <option name="url" value="https://maven.lumaserv.cloud" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="archiva-internal" />
       <option name="name" value="internal" />
       <option name="url" value="http://120.79.49.72:8081/repository/internal" />
