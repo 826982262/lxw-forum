@@ -57,9 +57,9 @@ mybatis-plus:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://119.29.79.150:3306/forum_uat?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/forum_uat?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
-    password: 667480
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     filters: log4j,mergeStat
     sql-script-encoding: UTF-8
